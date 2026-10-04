@@ -105,6 +105,22 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;backgroun
 .loss div{font-size:14px;padding:10px 12px;border-left:3px solid var(--signal);background:var(--signal-soft);border-radius:0 6px 6px 0}
 .loss div.g{border-left-color:var(--ok);background:var(--ok-soft)}
 .dates{display:grid;grid-template-columns:1fr 1fr .8fr;gap:12px}
+.dates.two{grid-template-columns:1fr 1fr}
+select#ind{width:100%;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);font:500 15px var(--sans);padding:10px}
+.ben .amt{font-family:var(--mono);font-size:13px;margin-top:8px;color:var(--ok);font-weight:500}
+.overlap{margin-top:14px;padding:14px 16px;border-radius:8px;background:var(--amber-soft);font-size:13px;line-height:1.7}
+.overlap b{display:block;font-size:14px;margin-bottom:4px}
+.overlap ul{margin:0;padding-left:18px}
+.legal{margin-top:14px;border:1px solid var(--line);border-radius:8px;background:var(--paper)}
+.legal summary{cursor:pointer;padding:12px 14px;font-size:14px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:8px}
+.legal summary::after{content:"펼치기 +";font-size:12px;font-weight:500;color:var(--tide);white-space:nowrap}
+.legal[open] summary::after{content:"접기 −"}
+.legal summary::-webkit-details-marker{display:none}
+.legal-body{padding:0 14px 14px;font-size:13px;line-height:1.7}
+.legal-body h4{font-size:13px;margin:12px 0 4px;color:var(--tide)}
+.legal-body ul{margin:0;padding-left:18px;display:grid;gap:4px}
+.legal-foot{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+.refund{margin-top:12px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;padding:14px 16px;border:1px dashed var(--tide);border-radius:8px;font-size:14px}
 @media (max-width:640px){.dates{grid-template-columns:1fr 1fr}}
 label.f{display:block;font-size:13px;color:var(--muted);margin-bottom:6px;font-weight:500}
 input[type=date]{width:100%;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);font:500 15px var(--mono);padding:10px}
@@ -156,7 +172,7 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
   <section class="intro">
     <span class="eyebrow">BOOKKEEPING CHECK · 2026</span>
     <h1>우리 사업장, 매달 기장이 필요할까?</h1>
-    <p>몇 가지 질문에 답하면 법에서 정한 장부 의무(복식부기의무자·간편장부대상자), 성실신고확인 대상 여부, 월 기장 필요도와 함께 부산 사업장이 받을 수 있는 창업 세액감면(최대 100%)과 고용 세액공제(1인당 최대 연 2,000만 원), 청년 창업자가 신청할 수 있는 자금·보증까지 바로 보여 드립니다.</p>
+    <p>몇 가지 질문에 답하면 법에서 정한 장부 의무(복식부기의무자·간편장부대상자), 성실신고확인 대상 여부, 월 기장 필요도와 함께 창업 세액감면, 중소기업 특별세액감면, 통합고용·통합투자·연구개발비 세액공제, 노란우산공제까지 받을 수 있는 절세 혜택과 청년 창업 지원사업을 한 번에 보여 드립니다.</p>
   </section>
 
   <div class="grid">
@@ -214,8 +230,8 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
       </div>
 
       <div class="q">
-        <h2><span>07</span>세금 감면·공제 확인</h2>
-        <p class="hint">부산 사업장은 창업 감면과 고용 공제를 크게 받을 수 있습니다. 해당하는 것을 고르세요.</p>
+        <h2><span>07</span>창업 정보</h2>
+        <p class="hint">창업 감면과 청년 여부를 판단합니다.</p>
         <label class="check"><input type="checkbox" id="c-busan" checked><span>사업장이 부산(수도권 밖)에 있다</span></label>
         <div class="dates">
           <div><label class="f" for="d-birth">대표자 생년월일</label><input type="date" id="d-birth" value="1994-05-10"></div>
@@ -224,7 +240,38 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
         </div>
         <div class="youth" id="youth"></div>
         <p class="hint">다른 사업을 이어받았거나, 기존 사업에 업종만 추가했거나, 폐업 후 같은 업종으로 다시 연 경우는 창업으로 보지 않습니다.</p>
-        <label class="check"><input type="checkbox" id="c-hire" checked><span>작년보다 4대보험 가입 정규직 직원을 늘렸거나 늘릴 계획이다<small>청년(15~34세)·60세 이상·장애인·경력단절자를 뽑으면 공제가 더 큽니다</small></span></label>
+      </div>
+
+      <div class="q">
+        <h2><span>08</span>절세 혜택 찾기</h2>
+        <p class="hint">요즘 세무사들이 많이 소개하는 감면·공제를 한 번에 확인합니다. 모르는 칸은 0으로 두세요.</p>
+        <div>
+          <label class="f" for="ind">세부 업종</label>
+          <select id="ind">
+            <option value="mfg" selected>제조업</option>
+            <option value="con">건설업</option>
+            <option value="ret">도매·소매업 (온라인 판매 포함)</option>
+            <option value="it">소프트웨어·정보통신·출판</option>
+            <option value="trn">운수·물류·운송주선</option>
+            <option value="pro">엔지니어링·광고·디자인 등 전문서비스</option>
+            <option value="med">병원·의원 등 의료업</option>
+            <option value="food">음식점·카페</option>
+            <option value="acc">숙박·주점·유흥</option>
+            <option value="svc">미용·세탁·사진 등 개인서비스</option>
+            <option value="rent">부동산임대</option>
+            <option value="etc">기타·잘 모르겠음</option>
+          </select>
+        </div>
+        <div class="dates">
+          <div><label class="f" for="h-y">늘린 직원 · 청년 등</label><div class="money"><input id="h-y" inputmode="numeric" value="1"><span>명</span></div><p class="hint">15~34세·60세 이상·장애인·경력단절</p></div>
+          <div><label class="f" for="h-g">늘린 직원 · 그 외</label><div class="money"><input id="h-g" inputmode="numeric" value="1"><span>명</span></div><p class="hint">작년보다 늘어난 4대보험 인원</p></div>
+          <div></div>
+        </div>
+        <div class="dates two">
+          <div><label class="f" for="inv">올해 설비 투자액</label><div class="money"><input id="inv" inputmode="numeric" value="30,000,000"><span>원</span></div><p class="hint">기계·장비·공구, 업무용 소프트웨어 등 (승용차·토지·건물 제외)</p></div>
+          <div><label class="f" for="rnd">연구원 인건비 등 연구개발비</label><div class="money"><input id="rnd" inputmode="numeric" value="0"><span>원</span></div><p class="hint">기업부설연구소·연구전담부서가 있는 경우</p></div>
+        </div>
+        <label class="check"><input type="checkbox" id="c-yellow" checked><span>노란우산공제에 가입했거나 가입할 생각이 있다<small>대표자 개인의 퇴직금 겸 절세 상품 (법인 대표는 총급여 8천만 원 이하)</small></span></label>
       </div>
     </form>
 
@@ -242,9 +289,40 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
       </div>
 
       <div class="card panel benefit" id="benefit-panel">
-        <h3>받을 수 있는 세금 혜택</h3>
+        <h3 id="ben-count">받을 수 있는 세금 혜택</h3>
         <div class="bens" id="bens"></div>
-        <p class="disc" id="ben-note" style="margin-top:12px"></p>
+        <div id="ben-note"></div>
+        <details class="legal" id="dup-rules">
+          <summary>감면·공제 중복 적용 제한 안내 (조세특례제한법 제127조 등)</summary>
+          <div class="legal-body">
+            <p>위에 표시된 혜택은 각각의 요건만 보고 판정한 것이며, 아래 중복 적용 제한 때문에 <b>모두 함께 받을 수 있는 것은 아닙니다.</b></p>
+            <h4>1. 감면과 감면</h4>
+            <ul>
+              <li>같은 사업장에서 같은 과세연도에 둘 이상의 세액감면(창업중소기업 세액감면, 중소기업 특별세액감면 등)에 해당하면 <b>그중 하나만</b> 선택해 적용받습니다.</li>
+            </ul>
+            <h4>2. 감면과 공제</h4>
+            <ul>
+              <li>창업중소기업 세액감면·중소기업 특별세액감면 등 세액감면을 받는 과세연도에는 <b>통합투자세액공제 등 일부 세액공제를 함께 받을 수 없어</b>, 감면과 공제 중 하나를 선택해야 합니다.</li>
+              <li>통합고용세액공제 등 고용 관련 공제는 예외적으로 세액감면과 함께 적용될 수 있습니다. 다만 <b>2025년 1월 1일 이후 창업하여 창업중소기업 세액감면을 받는 경우에는 통합고용세액공제와 함께 받을 수 없습니다.</b></li>
+              <li>연구·인력개발비 세액공제는 세액감면과 함께 적용받을 수 있습니다.</li>
+            </ul>
+            <h4>3. 공제와 공제</h4>
+            <ul>
+              <li>같은 투자자산에 대해 둘 이상의 투자 관련 세액공제를 중복해서 받을 수 없고, 국가·지방자치단체 보조금 등으로 투자한 금액은 공제 대상에서 빠집니다.</li>
+              <li>고용증대세액공제와 통합고용세액공제는 같은 과세연도에 함께 받을 수 없으며, 같은 근로자에 대해 고용 관련 공제를 중복해서 받을 수 없습니다.</li>
+            </ul>
+            <h4>4. 그 밖의 제한</h4>
+            <ul>
+              <li><b>최저한세:</b> 감면·공제를 적용한 후에도 법에서 정한 최저한세는 납부해야 하며, 이를 넘는 감면·공제는 적용되지 않습니다.</li>
+              <li><b>이월공제:</b> 다 쓰지 못한 세액공제는 다음 과세연도부터 10년간 이월할 수 있지만, 세액감면은 이월되지 않습니다.</li>
+              <li><b>농어촌특별세:</b> 통합투자세액공제 등 일부 공제·감면에는 공제·감면세액의 20%가 농어촌특별세로 부과됩니다.</li>
+              <li><b>감면 배제:</b> 복식부기의무자가 장부 없이 추계로 신고하거나 무신고·기한후신고를 한 경우, 사업용계좌 미신고·현금영수증 미가맹 등 의무를 지키지 않은 경우에는 감면·공제가 배제될 수 있습니다.</li>
+              <li><b>사후관리:</b> 공제 후 상시근로자가 줄거나 투자자산을 일정 기간 내 처분하는 경우 공제받은 세액이 추징될 수 있습니다.</li>
+            </ul>
+            <p class="legal-foot">이 진단 결과는 2026년 10월 현재 법령을 기준으로 입력값만으로 판정한 참고용 모의 결과이며, 세무 자문이나 신고 대리를 대신하지 않습니다. 실제 적용 여부와 금액은 업종·사업장·고용 형태·투자 내용 등 개별 사실관계와 이후 법령 개정에 따라 달라질 수 있으므로, 이 결과만으로 신고하거나 의사결정을 하기 전에 반드시 세무사와 확인하시기 바랍니다. 해양세무회계는 이 결과를 근거로 한 판단에 대해 법적 책임을 지지 않습니다.</p>
+          </div>
+        </details>
+        <div class="refund"><span>지난 5년 동안 이 혜택을 놓쳤다면 <b>경정청구</b>로 돌려받을 수 있습니다.</span><a class="btn primary" href="https://map.naver.com/p/entry/place/1714950850?placePath=%2Fticket" target="_blank" rel="noopener">환급 가능성 상담</a></div>
       </div>
 
       <div class="card panel" id="prog-panel">
@@ -384,29 +462,80 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
   }
   // 2026년 현행: 창업중소기업 세액감면(조특법 6조), 통합고용세액공제(조특법 29조의8, 2026.1.1 이후 개시 과세연도 개편분)
   function benefits(i){
-    const out=[];let note=[];
-    const exclSector=i.sector==='4'; // 전문직은 창업감면 업종 아님
+    const out=[], loc=i.busan, man=n=>Math.round(n/MAN).toLocaleString('ko-KR')+'만 원';
+    const exclSector=i.sector==='4';
+    let startup=false, special=false;
+    // 1. 창업중소기업 세액감면 (조특법 6조)
     if(i.y5){
       if(exclSector){out.push({off:1,t:'창업중소기업 세액감면',v:'대상 업종 아님',d:'의료·법률·세무 등 전문직은 창업 감면 업종에서 빠집니다.'})}
-      else if(!i.busan){out.push({off:1,t:'창업중소기업 세액감면',v:'지역 확인 필요',d:'수도권은 2026년 이후 창업분부터 감면율이 낮아지거나 없어집니다. 상담으로 확인해 드립니다.'})}
+      else if(!loc){out.push({off:1,t:'창업중소기업 세액감면',v:'지역 확인 필요',d:'수도권은 2026년 이후 창업분부터 감면율이 낮아지거나 없어집니다. 상담으로 확인해 드립니다.'})}
       else{
-        const small=i.rev<=104000000;
-        const rate=(i.young||small)?100:50;
+        startup=true;
+        const small=i.rev<=104000000, rate=(i.young||small)?100:50;
         const why=i.young?`청년 창업(등록 당시 만 ${i.ageReg}세${i.ageReg>34?`, 군 복무 ${i.mil}개월 반영`:''})`:small?'연 매출 1억 400만 원 이하 생계형 창업':'일반 창업';
         const basis=i.young?'청년':small?'생계형':'일반';
         out.push({t:'창업중소기업 세액감면',v:`${i.form==='corp'?'법인세':'소득세'} ${rate}% 감면 (${basis})`,d:`${!i.young&&small&&i.ok?'청년 요건에는 해당하지 않지만, ':''}부산(수도권 밖) ${why}은 소득이 처음 생긴 해부터 5년 동안 ${i.form==='corp'?'법인세':'종합소득세'}의 ${rate}%를 감면받습니다.${rate===50?' 사업자등록 당시 만 34세 이하(군 복무 기간만큼 최대 40세)였다면 100%입니다.':''} 부동산임대업·유흥업 등 일부 업종은 제외됩니다.`});
       }
+    }else if(i.ok&&!exclSector){out.push({off:1,t:'창업중소기업 세액감면',v:'기간 지남',d:'창업 감면은 소득이 처음 생긴 해부터 5년 동안만 받을 수 있습니다. 대신 아래 중소기업 특별세액감면을 확인하세요.'})}
+
+    // 2. 중소기업 특별세액감면 (조특법 7조)
+    const SP={mfg:'A',con:'A',it:'A',trn:'A',pro:'A',ret:'R',med:'R',food:'X',acc:'X',svc:'X',rent:'X',etc:'?'}[i.ind];
+    if(SP==='X'){out.push({off:1,t:'중소기업 특별세액감면',v:'대상 업종 아님',d:'음식점·숙박·주점·개인서비스·부동산임대업은 특별세액감면 업종에 들어가지 않습니다.'})}
+    else if(SP==='?'){out.push({off:1,t:'중소기업 특별세액감면',v:'업종 확인 필요',d:'48개 감면 업종에 들어가는지 확인이 필요합니다. 업종에 따라 소득세·법인세의 5~30%를 매년 감면받습니다.'})}
+    else{
+      special=true;
+      const small=i.rev<10*EOK;
+      const r=SP==='A'?(loc?[30,15]:[20,0]):(loc?[10,5]:[10,0]);
+      const rateTxt=small?`${r[0]}%`:`${r[1]||'—'}~${r[0]}%`;
+      out.push({t:'중소기업 특별세액감면',v:`매년 ${rateTxt} 감면`,d:`${loc?'지방':'수도권'} ${small?'소기업':'중소기업'} 기준 ${i.form==='corp'?'법인세':'소득세'}의 ${rateTxt}를 기간 제한 없이 매년 감면받습니다(연 1억 원 한도, 직원이 줄면 1명당 500만 원씩 한도 축소).${small?'':' 매출 10억 원 이상이면 업종별 소기업 기준에 따라 감면율이 달라집니다.'}${i.ind==='med'?' 의원급 의료기관은 요양급여 비중 등 추가 요건이 있습니다.':''}`});
     }
-    if(i.ok&&!i.y5&&!exclSector){out.push({off:1,t:'창업중소기업 세액감면',v:'기간 지남',d:'창업 감면은 소득이 처음 생긴 해부터 5년 동안만 받을 수 있습니다.'})}
+
+    // 3. 통합고용세액공제 (조특법 29조의8, 2026 개편)
     if(i.hire){
-      const loc=i.busan;
       const g=loc?[700,1200,1300]:[400,900,1000], p=loc?[1000,1900,2000]:[700,1600,1700];
-      out.push({t:'통합고용세액공제',v:`1인당 최대 연 ${p[2].toLocaleString('ko-KR')}만 원`,d:`작년보다 상시근로자(4대보험 가입)가 1명 늘 때마다, ${loc?'지방':'수도권'} 중소기업 기준 1년차 ${g[0]}만 원·2년차 ${g[1].toLocaleString('ko-KR')}만 원·3년차 ${g[2].toLocaleString('ko-KR')}만 원을 세금에서 뺍니다. 청년·60세 이상·장애인·경력단절자는 ${p[0].toLocaleString('ko-KR')}만 → ${p[1].toLocaleString('ko-KR')}만 → ${p[2].toLocaleString('ko-KR')}만 원입니다. 2026년부터 오래 고용할수록 공제가 커지는 구조로 바뀌었습니다.`});
+      const y1=(i.hy*p[0]+i.hg*g[0])*MAN, y3=(i.hy*(p[0]+p[1]+p[2])+i.hg*(g[0]+g[1]+g[2]))*MAN;
+      out.push({t:'통합고용세액공제',v:`올해 약 ${man(y1)}`,amt:`3년 계속 고용 시 합계 약 ${man(y3)}`,d:`작년보다 늘어난 4대보험 가입 직원 1명당 ${loc?'지방':'수도권'} 중소기업 기준 1년차 ${g[0]}만 원 → 2년차 ${g[1].toLocaleString('ko-KR')}만 원 → 3년차 ${g[2].toLocaleString('ko-KR')}만 원, 청년 등은 ${p[0].toLocaleString('ko-KR')}만 → ${p[1].toLocaleString('ko-KR')}만 → ${p[2].toLocaleString('ko-KR')}만 원을 세금에서 뺍니다. 2026년부터 오래 고용할수록 커지는 구조입니다.`});
     }
-    if(out.some(o=>!o.off&&o.t.startsWith('창업'))&&i.hire) note.push('2025년 이후 창업한 기업은 창업 감면과 고용 공제를 함께 받을 수 없어 둘 중 유리한 쪽을 골라야 합니다. 어느 쪽이 큰지는 세액을 계산해 봐야 압니다.');
-    if(out.some(o=>!o.off)) note.push('두 혜택 모두 정확한 소득 계산과 월별 상시근로자 수 관리가 있어야 받을 수 있고, 신고 때 직접 신청해야 합니다. 놓치면 경정청구로 5년 안에 돌려받을 수 있습니다.');
-    return {out,note:note.join(' ')};
+
+    // 4. 통합투자세액공제 (조특법 24조)
+    if(i.inv>0){
+      const c=i.inv*0.10;
+      out.push({t:'통합투자세액공제',v:`약 ${man(c)}`,amt:`농어촌특별세(공제액의 20%) 차감 후 약 ${man(c*0.8)}`,d:'중소기업은 기계·장비 등 사업용 자산 투자액의 10%를 공제받고, 최근 3년 평균보다 늘어난 투자액은 10%를 추가로 공제받습니다(신성장 12%, 국가전략기술 25%). 승용차·토지·건물·중고품은 제외됩니다.'});
+    }
+
+    // 5. 연구·인력개발비 세액공제 (조특법 10조)
+    if(i.rnd>0){
+      out.push({t:'연구·인력개발비 세액공제',v:`약 ${man(i.rnd*0.25)}`,d:'기업부설연구소나 연구전담부서를 인정받은 중소기업은 연구원 인건비 등 연구개발비의 25%를 공제받습니다. 감면과 함께 받을 수 있어 가장 큰 절세 수단 중 하나지만, 연구노트 등 증빙 관리가 중요합니다.'});
+    }else if(['mfg','it','pro'].includes(i.ind)){
+      out.push({off:1,t:'연구·인력개발비 세액공제',v:'연구소 설립 시 25%',d:'제조·IT·전문서비스 업종은 연구전담부서만 등록해도 연구원 인건비의 25%를 세액공제받을 수 있습니다. 설립 요건을 상담으로 확인해 드립니다.'});
+    }
+
+    // 6. 성실신고확인비용 세액공제
+    if(i.form!=='corp'&&i.sector!=='4'&&i.open!=='new'&&STD[i.sector]&&i.rev>=STD[i.sector].sincere){
+      out.push({t:'성실신고확인비용 세액공제',v:'최대 120만 원',d:'성실신고확인 대상자는 확인 수수료의 60%(최대 120만 원)를 세액공제받습니다.'});
+    }
+
+    // 7. 노란우산공제 소득공제
+    if(i.yellow){
+      out.push({t:'노란우산공제 소득공제',v:'최대 600만 원 소득공제',d:'사업소득금액 4천만 원 이하는 연 600만 원, 1억 원 이하는 구간에 따라 300만~500만 원, 1억 원 초과는 200만 원까지 소득공제됩니다. 압류가 금지되어 폐업 때 생활자금으로도 쓸 수 있습니다.'});
+    }
+
+    // 8. 직원 혜택: 중소기업 취업자 소득세 감면 (채용 홍보용)
+    if(i.hy>0){
+      out.push({t:'직원 혜택 · 중소기업 취업자 소득세 감면',v:'청년 직원 소득세 90%',d:'중소기업에 취업한 청년은 5년간 근로소득세의 90%(연 200만 원 한도)를 감면받습니다. 채용 공고에 적으면 구인에 도움이 됩니다.'});
+    }
+
+    // 중복 적용 안내
+    const ov=[];
+    if(startup&&special) ov.push('창업중소기업 세액감면과 중소기업 특별세액감면은 같은 해에 하나만 받을 수 있습니다. 창업 5년 동안은 보통 창업 감면이 더 큽니다.');
+    if((startup||special)&&i.inv>0) ov.push('세액감면(창업·특별)과 통합투자세액공제는 함께 받을 수 없어, 그해 더 큰 쪽을 고릅니다.');
+    if(startup&&i.hire&&i.ok&&new Date($('d-reg').value)>=new Date('2025-01-01')) ov.push('2025년 이후 창업한 기업은 창업 감면과 통합고용세액공제 중 하나만 받을 수 있습니다.');
+    if(special&&i.hire) ov.push('중소기업 특별세액감면과 통합고용세액공제는 함께 받을 수 있습니다.');
+    if(i.rnd>0) ov.push('연구·인력개발비 세액공제는 감면과 함께 받을 수 있습니다.');
+    if(ov.length) ov.push('공제를 많이 받아도 최저한세(산출세액의 일정 비율)는 내야 하고, 다 못 쓴 공제는 10년간 이월됩니다.');
+    return {out,ov};
   }
+
 
   // 2026년 공고 기준 청년 창업 지원사업 (조건은 해마다 바뀜)
   function programs(i){
@@ -421,10 +550,11 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
     return list;
   }
 
-  function read(){return{form:val('form'),sector:val('sector'),open:val('open'),rev:num($('rev').value),emp:+val('emp'),cost:$('c-cost').checked,loss:$('c-loss').checked,loan:$('c-loan').checked,inv:$('c-inv').checked,grow:$('c-grow').checked,busan:$('c-busan').checked,hire:$('c-hire').checked,...ages()}}
+  function read(){return{form:val('form'),sector:val('sector'),open:val('open'),rev:num($('rev').value),emp:+val('emp'),cost:$('c-cost').checked,loss:$('c-loss').checked,loan:$('c-loan').checked,inv:$('c-inv').checked,grow:$('c-grow').checked,busan:$('c-busan').checked,ind:$('ind').value,hy:num($('h-y').value),hg:num($('h-g').value),inv:num($('inv').value),rnd:num($('rnd').value),yellow:$('c-yellow').checked,get hire(){return this.hy+this.hg>0},...ages()}}
 
   function render(){
     const el=$('rev');const n=num(el.value);el.value=n?n.toLocaleString('ko-KR'):'';$('rev-kor').textContent=kor(n);
+    ['inv','rnd'].forEach(id=>{const e=$(id);const v=num(e.value);e.value=v?v.toLocaleString('ko-KR'):'0'});
     const i=read();
     const corp=i.form==='corp';
     $('q-sector').hidden=corp;$('q-open').hidden=corp;
@@ -445,8 +575,11 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
     PR.forEach(o=>{const d=document.createElement('div');d.className='prog'+(o.ok?'':' no');const t=document.createElement('span');t.className='tag '+(o.ok?'y':'n');t.textContent=o.ok?'신청 가능':'해당 안 됨';const box=document.createElement('div');const b1=document.createElement('b');b1.textContent=o.t;const p1=document.createElement('p');p1.textContent=o.ok?o.d:o.why;box.append(b1,p1);if(o.ok&&o.url){const a1=document.createElement('a');a1.href=o.url;a1.target='_blank';a1.rel='noopener';a1.textContent=o.site+' →';box.appendChild(a1)}d.append(t,box);pg.appendChild(d)});
     const B=benefits(i);const bx=$('bens');bx.innerHTML='';
     $('benefit-panel').hidden=!B.out.length;
-    B.out.forEach(o=>{const d=document.createElement('div');d.className='ben'+(o.off?' off':'');const t=document.createElement('div');t.className='t';const b1=document.createElement('b');b1.textContent=o.t;const s1=document.createElement('strong');s1.textContent=o.v;t.append(b1,s1);const p1=document.createElement('p');p1.textContent=o.d;d.append(t,p1);bx.appendChild(d)});
-    $('ben-note').textContent=B.note;
+    const on=B.out.filter(o=>!o.off), off=B.out.filter(o=>o.off);
+    $('ben-count').textContent=on.length?`받을 수 있는 혜택 ${on.length}가지`:'받을 수 있는 세금 혜택';
+    [...on,...off].forEach(o=>{const d=document.createElement('div');d.className='ben'+(o.off?' off':'');const t=document.createElement('div');t.className='t';const b1=document.createElement('b');b1.textContent=o.t;const s1=document.createElement('strong');s1.textContent=o.v;t.append(b1,s1);const p1=document.createElement('p');p1.textContent=o.d;d.append(t,p1);if(o.amt){const a=document.createElement('div');a.className='amt';a.textContent=o.amt;d.appendChild(a)}bx.appendChild(d)});
+    const ovb=$('ben-note');ovb.innerHTML='';
+    if(B.ov.length){const box=document.createElement('div');box.className='overlap';const h=document.createElement('b');h.textContent='함께 받을 수 있는지 확인하세요';const ul=document.createElement('ul');B.ov.forEach(t=>{const li=document.createElement('li');li.textContent=t;ul.appendChild(li)});box.append(h,ul);ovb.appendChild(box)}
     $('f-duty').textContent=r.duty;$('f-sincere').textContent=r.sincere;
     const ul=$('reasons');ul.innerHTML='';
     r.R.forEach(([c,t])=>{const li=document.createElement('li');li.className=c;li.textContent=t;ul.appendChild(li)});
