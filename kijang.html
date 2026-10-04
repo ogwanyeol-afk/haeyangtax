@@ -220,7 +220,7 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
         <div class="dates">
           <div><label class="f" for="d-birth">대표자 생년월일</label><input type="date" id="d-birth" value="1994-05-10"></div>
           <div><label class="f" for="d-reg">사업자등록 신청일</label><input type="date" id="d-reg" value="2024-03-04"><p class="hint">법인은 설립등기일</p></div>
-          <div><label class="f" for="mil">군 복무 기간 (남성)</label><div class="money"><input id="mil" inputmode="numeric" value="21"><span>개월</span></div><p class="hint">최대 6년 인정, 없으면 0</p></div>
+          <div><label class="f" for="mil">군 복무 기간 (남성)</label><div class="money"><input id="mil" inputmode="numeric" value="0"><span>개월</span></div><p class="hint">최대 6년 인정, 없으면 0</p></div>
         </div>
         <div class="youth" id="youth"></div>
         <p class="hint">다른 사업을 이어받았거나, 기존 사업에 업종만 추가했거나, 폐업 후 같은 업종으로 다시 연 경우는 창업으로 보지 않습니다.</p>
@@ -392,8 +392,9 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
       else{
         const small=i.rev<=104000000;
         const rate=(i.young||small)?100:50;
-        const why=i.young?`청년 창업(등록 당시 만 ${i.ageReg}세)`:small?'연 매출 1억 400만 원 이하 생계형 창업':'일반 창업';
-        out.push({t:'창업중소기업 세액감면',v:`${i.form==='corp'?'법인세':'소득세'} ${rate}% 감면`,d:`부산(수도권 밖) ${why}은 소득이 처음 생긴 해부터 5년 동안 ${i.form==='corp'?'법인세':'종합소득세'}의 ${rate}%를 감면받습니다.${rate===50?' 사업자등록 당시 만 34세 이하(군 복무 기간만큼 최대 40세)였다면 100%입니다.':''} 부동산임대업·유흥업 등 일부 업종은 제외됩니다.`});
+        const why=i.young?`청년 창업(등록 당시 만 ${i.ageReg}세${i.ageReg>34?`, 군 복무 ${i.mil}개월 반영`:''})`:small?'연 매출 1억 400만 원 이하 생계형 창업':'일반 창업';
+        const basis=i.young?'청년':small?'생계형':'일반';
+        out.push({t:'창업중소기업 세액감면',v:`${i.form==='corp'?'법인세':'소득세'} ${rate}% 감면 (${basis})`,d:`${!i.young&&small&&i.ok?'청년 요건에는 해당하지 않지만, ':''}부산(수도권 밖) ${why}은 소득이 처음 생긴 해부터 5년 동안 ${i.form==='corp'?'법인세':'종합소득세'}의 ${rate}%를 감면받습니다.${rate===50?' 사업자등록 당시 만 34세 이하(군 복무 기간만큼 최대 40세)였다면 100%입니다.':''} 부동산임대업·유흥업 등 일부 업종은 제외됩니다.`});
       }
     }
     if(i.ok&&!i.y5&&!exclSector){out.push({off:1,t:'창업중소기업 세액감면',v:'기간 지남',d:'창업 감면은 소득이 처음 생긴 해부터 5년 동안만 받을 수 있습니다.'})}
