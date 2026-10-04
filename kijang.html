@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>기장 필요도 자가진단 | 해양세무회계</title>
+<meta name="description" content="우리 사업장, 매달 장부(기장)가 필요할까? 업종과 매출만 넣으면 복식부기의무자·간편장부대상자 여부, 성실신고확인 대상 여부, 월 기장 필요도를 바로 알려 드립니다. 해양세무회계 세무사 오관열.">
+<link rel="canonical" href="https://haeyangtax.com/kijang.html">
+<meta property="og:title" content="기장 필요도 자가진단 | 해양세무회계">
+<meta property="og:description" content="장부 의무, 월 기장 필요도, 부산 창업감면·고용세액공제까지 2026년 기준으로 확인">
+<meta property="og:url" content="https://haeyangtax.com/kijang.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@600;700&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --ink:#0B2433;--paper:#EEF3F2;--surface:#F8FBFA;--line:#C5D5D5;--muted:#557077;
+  --tide:#2B7A78;--tide-soft:#D6E8E6;--signal:#D9542B;--signal-soft:#F6E1D8;--ok:#2E7D4F;--ok-soft:#DCEFE3;--amber:#B7791F;--amber-soft:#F5EAD3;
+  --serif:"Hahmlet","Nanum Myeongjo",serif;
+  --sans:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root{color-scheme:dark;--ink:#E3ECEC;--paper:#0A1C26;--surface:#10293A;--line:#23445A;--muted:#8FA9AE;
+  --tide:#5FB3AE;--tide-soft:#15394A;--signal:#F07A4F;--signal-soft:#3A2419;--ok:#6CC08E;--ok-soft:#173526;--amber:#E0A84E;--amber-soft:#3A2E17}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;word-break:keep-all}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--signal);outline-offset:2px;border-radius:3px}
+[hidden]{display:none!important}
+.wrap{max-width:1120px;margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
+h1,h2,h3{font-family:var(--serif);font-weight:700;margin:0;line-height:1.3;text-wrap:balance}
+p{margin:0}
+
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:30px;height:30px}
+.brand b{font-family:var(--serif);font-size:18px}
+.brand small{display:block;font-size:11px;color:var(--muted);line-height:1.2}
+.back{font-size:14px;color:var(--muted);text-decoration:none}
+.back:hover{color:var(--ink)}
+
+.intro{padding-block:36px 24px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--tide)}
+.intro h1{font-size:clamp(28px,4vw,40px);margin-top:8px}
+.intro p{color:var(--muted);margin-top:10px;max-width:46em}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;padding-bottom:64px}
+@media (max-width:900px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:24px}
+
+.q{display:grid;gap:10px}
+.q+.q{margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+.q h2{font-size:17px;display:flex;gap:10px;align-items:baseline}
+.q h2 span{font-family:var(--mono);font-size:12px;color:var(--tide);font-weight:500}
+.hint{font-size:12px;color:var(--muted)}
+.opts{display:grid;gap:8px}
+.opts.two{grid-template-columns:1fr 1fr}
+.opts.three{grid-template-columns:repeat(3,1fr)}
+@media (max-width:520px){.opts.three{grid-template-columns:1fr}}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt label{display:block;padding:11px 14px;border:1px solid var(--line);border-radius:8px;background:var(--paper);cursor:pointer;font-size:14px;line-height:1.45}
+.opt label small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+.opt input:checked+label{border-color:var(--ink);background:var(--ink);color:var(--paper)}
+.opt input:checked+label small{color:color-mix(in srgb,var(--paper) 75%,transparent)}
+.opt input:focus-visible+label{outline:2px solid var(--signal);outline-offset:2px}
+.money{position:relative}
+.money input{width:100%;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);font:500 18px var(--mono);padding:11px 36px 11px 12px;text-align:right;font-variant-numeric:tabular-nums}
+.money input:focus{outline:none;border-color:var(--tide)}
+.money span{position:absolute;right:12px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:14px}
+.kor{font-size:12px;color:var(--tide);min-height:18px}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;cursor:pointer;padding:8px 0}
+.check input{width:18px;height:18px;margin-top:3px;accent-color:var(--tide);flex:none}
+.check small{display:block;color:var(--muted);font-size:12px}
+
+/* result */
+.result{display:grid;gap:16px}
+@media (max-width:900px){.result{position:static}}
+.verdict{border-radius:10px;padding:24px;background:var(--ink);color:var(--paper)}
+.verdict .lbl{font-size:13px;opacity:.75}
+.verdict .big{font-family:var(--serif);font-size:clamp(28px,4vw,36px);font-weight:700;margin-top:6px}
+.meter{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:16px}
+.meter i{height:8px;border-radius:2px;background:color-mix(in srgb,var(--paper) 18%,transparent)}
+.meter i.on{background:var(--lv)}
+.meter-l{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:6px;font-size:11px;opacity:.7}
+.verdict .one{margin-top:14px;font-size:14px;opacity:.9}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.fact{background:color-mix(in srgb,var(--paper) 10%,transparent);border:1px solid color-mix(in srgb,var(--paper) 20%,transparent);border-radius:8px;padding:10px 12px}
+.fact span{display:block;font-size:11px;opacity:.7}
+.fact b{font-size:15px;font-weight:600}
+.panel h3{font-size:17px;margin-bottom:10px}
+.reasons{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.reasons li{display:grid;grid-template-columns:auto 1fr;gap:10px;font-size:14px;padding:10px 12px;border-radius:6px;background:var(--paper)}
+.reasons li::before{content:"";width:8px;height:8px;border-radius:50%;margin-top:7px;background:var(--muted)}
+.reasons li.hi::before{background:var(--signal)}
+.reasons li.md::before{background:var(--amber)}
+.reasons li.lo::before{background:var(--ok)}
+.loss{display:grid;gap:8px}
+.loss div{font-size:14px;padding:10px 12px;border-left:3px solid var(--signal);background:var(--signal-soft);border-radius:0 6px 6px 0}
+.loss div.g{border-left-color:var(--ok);background:var(--ok-soft)}
+.dates{display:grid;grid-template-columns:1fr 1fr .8fr;gap:12px}
+@media (max-width:640px){.dates{grid-template-columns:1fr 1fr}}
+label.f{display:block;font-size:13px;color:var(--muted);margin-bottom:6px;font-weight:500}
+input[type=date]{width:100%;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);font:500 15px var(--mono);padding:10px}
+input[type=date]:focus{outline:none;border-color:var(--tide)}
+.dates .money input{font-size:15px;padding-block:10px;padding-right:46px}
+.youth{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.youth div{border-radius:8px;padding:10px 12px;background:var(--paper);border:1px solid var(--line);font-size:13px}
+.youth div b{display:block;font-size:15px;margin-top:2px}
+.youth div.y{border-color:var(--ok);background:var(--ok-soft)}
+@media (max-width:520px){.youth{grid-template-columns:1fr}}
+.progs{display:grid;gap:8px}
+.prog{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:var(--paper)}
+.prog .tag{font-size:11px;font-weight:600;padding:2px 8px;border-radius:999px;white-space:nowrap;margin-top:2px}
+.prog .tag.y{background:var(--ok);color:#fff}
+.prog .tag.n{background:var(--line);color:var(--muted)}
+.prog b{font-size:15px}
+.prog p{font-size:13px;color:var(--muted);margin-top:3px}
+.prog a{font-size:13px;color:var(--tide);font-weight:600}
+.prog.no{opacity:.7}
+.bens{display:grid;gap:10px}
+.ben{border:1px solid var(--ok);background:var(--ok-soft);border-radius:8px;padding:14px 16px}
+.ben .t{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
+.ben .t b{font-size:15px}
+.ben .t strong{font-family:var(--serif);font-size:20px;color:var(--ok);white-space:nowrap}
+.ben p{font-size:13px;margin-top:6px;color:var(--ink)}
+.ben.off{border-color:var(--line);background:var(--paper)}
+.ben.off .t strong{color:var(--muted);font-size:15px}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.btn{display:inline-flex;align-items:center;padding:11px 18px;border-radius:6px;font-weight:600;font-size:14px;text-decoration:none;border:1px solid var(--ink)}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.disc{font-size:12px;color:var(--muted);line-height:1.6}
+.mbar{display:none}
+@media (max-width:900px){.mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--paper);text-decoration:none;font-size:13px}.mbar b{font-family:var(--serif);font-size:17px}body{padding-bottom:64px}}
+footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="해양세무회계 홈으로">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="17" r="9" fill="none" stroke="currentColor" stroke-width="2.4"/><line x1="13" y1="4.5" x2="27" y2="4.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M4 32c4-3 8-3 12 0s8 3 12 0 8-3 8-1" fill="none" stroke="#D9542B" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span><b>해양세무회계</b><small>세무사 오관열</small></span>
+    </a>
+    <a class="back" href="/#tools">← 다른 도구 보기</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="intro">
+    <span class="eyebrow">BOOKKEEPING CHECK · 2026</span>
+    <h1>우리 사업장, 매달 기장이 필요할까?</h1>
+    <p>몇 가지 질문에 답하면 법에서 정한 장부 의무(복식부기의무자·간편장부대상자), 성실신고확인 대상 여부, 월 기장 필요도와 함께 부산 사업장이 받을 수 있는 창업 세액감면(최대 100%)과 고용 세액공제(1인당 최대 연 2,000만 원), 청년 창업자가 신청할 수 있는 자금·보증까지 바로 보여 드립니다.</p>
+  </section>
+
+  <div class="grid">
+    <form class="card" id="form" novalidate>
+      <div class="q">
+        <h2><span>01</span>사업자 형태</h2>
+        <div class="opts two">
+          <div class="opt"><input type="radio" name="form" id="f-ind" value="ind" checked><label for="f-ind">개인사업자</label></div>
+          <div class="opt"><input type="radio" name="form" id="f-corp" value="corp"><label for="f-corp">법인사업자</label></div>
+        </div>
+      </div>
+
+      <div class="q" id="q-sector">
+        <h2><span>02</span>업종</h2>
+        <div class="opts">
+          <div class="opt"><input type="radio" name="sector" id="s1" value="1"><label for="s1">도소매·농업·임업·어업·부동산매매<small>온라인 판매, 편의점, 도매상, 농가 등</small></label></div>
+          <div class="opt"><input type="radio" name="sector" id="s2" value="2" checked><label for="s2">제조·음식점·숙박·건설·운수·IT<small>식당, 카페, 공장, 인테리어, 화물, 개발사 등</small></label></div>
+          <div class="opt"><input type="radio" name="sector" id="s3" value="3"><label for="s3">서비스·임대·교육·보건·프리랜서<small>상가 임대, 학원, 미용실, 컨설팅, 강사 등</small></label></div>
+          <div class="opt"><input type="radio" name="sector" id="s4" value="4"><label for="s4">전문직<small>의사·한의사·약사·변호사·세무사·회계사·변리사·건축사 등</small></label></div>
+        </div>
+      </div>
+
+      <div class="q" id="q-open">
+        <h2><span>03</span>개업 시기</h2>
+        <div class="opts two">
+          <div class="opt"><input type="radio" name="open" id="o-old" value="old" checked><label for="o-old">작년 이전 개업</label></div>
+          <div class="opt"><input type="radio" name="open" id="o-new" value="new"><label for="o-new">올해 개업</label></div>
+        </div>
+      </div>
+
+      <div class="q">
+        <h2><span>04</span><span id="rev-title" style="font-family:inherit;font-size:inherit;color:inherit;font-weight:inherit">작년 연 매출</span></h2>
+        <div class="money"><input id="rev" inputmode="numeric" value="90,000,000" aria-labelledby="rev-title"><span>원</span></div>
+        <div class="kor" id="rev-kor"></div>
+        <p class="hint" id="rev-hint">부가세를 뺀 1년 매출(수입금액)입니다. 카드·현금영수증·세금계산서·현금 매출을 모두 합칩니다.</p>
+      </div>
+
+      <div class="q">
+        <h2><span>05</span>직원</h2>
+        <div class="opts three">
+          <div class="opt"><input type="radio" name="emp" id="e0" value="0"><label for="e0">없음</label></div>
+          <div class="opt"><input type="radio" name="emp" id="e1" value="1" checked><label for="e1">1~4명</label></div>
+          <div class="opt"><input type="radio" name="emp" id="e5" value="5"><label for="e5">5명 이상</label></div>
+        </div>
+        <p class="hint">아르바이트·일용직 포함. 직원이 있으면 매달 원천세 신고와 4대보험 관리가 필요합니다.</p>
+      </div>
+
+      <div class="q">
+        <h2><span>06</span>해당하는 것을 모두 고르세요</h2>
+        <label class="check"><input type="checkbox" id="c-cost" checked><span>재료비·인건비·임차료 등 실제 경비가 큰 편이다<small>매출의 절반 이상이 비용으로 나가는 경우</small></span></label>
+        <label class="check"><input type="checkbox" id="c-loss"><span>적자가 났거나 날 가능성이 있다<small>장부가 있어야 적자를 다음 해 이익에서 뺄 수 있습니다</small></span></label>
+        <label class="check"><input type="checkbox" id="c-loan"><span>대출·정책자금·보증을 받을 계획이 있다<small>은행과 보증기관은 재무제표를 요구합니다</small></span></label>
+        <label class="check"><input type="checkbox" id="c-inv" checked><span>세금계산서를 매달 주고받는다<small>거래처가 사업자(B2B)인 경우</small></span></label>
+        <label class="check"><input type="checkbox" id="c-grow"><span>올해 매출이 작년보다 크게 늘 것 같다</span></label>
+      </div>
+
+      <div class="q">
+        <h2><span>07</span>세금 감면·공제 확인</h2>
+        <p class="hint">부산 사업장은 창업 감면과 고용 공제를 크게 받을 수 있습니다. 해당하는 것을 고르세요.</p>
+        <label class="check"><input type="checkbox" id="c-busan" checked><span>사업장이 부산(수도권 밖)에 있다</span></label>
+        <div class="dates">
+          <div><label class="f" for="d-birth">대표자 생년월일</label><input type="date" id="d-birth" value="1994-05-10"></div>
+          <div><label class="f" for="d-reg">사업자등록 신청일</label><input type="date" id="d-reg" value="2024-03-04"><p class="hint">법인은 설립등기일</p></div>
+          <div><label class="f" for="mil">군 복무 기간 (남성)</label><div class="money"><input id="mil" inputmode="numeric" value="21"><span>개월</span></div><p class="hint">최대 6년 인정, 없으면 0</p></div>
+        </div>
+        <div class="youth" id="youth"></div>
+        <p class="hint">다른 사업을 이어받았거나, 기존 사업에 업종만 추가했거나, 폐업 후 같은 업종으로 다시 연 경우는 창업으로 보지 않습니다.</p>
+        <label class="check"><input type="checkbox" id="c-hire" checked><span>작년보다 4대보험 가입 정규직 직원을 늘렸거나 늘릴 계획이다<small>청년(15~34세)·60세 이상·장애인·경력단절자를 뽑으면 공제가 더 큽니다</small></span></label>
+      </div>
+    </form>
+
+    <aside class="result" id="result" aria-live="polite">
+      <div class="verdict">
+        <div class="lbl">월 기장 필요도</div>
+        <div class="big" id="v-big">-</div>
+        <div class="meter" id="meter"><i></i><i></i><i></i><i></i></div>
+        <div class="meter-l"><span>선택</span><span>권장</span><span>강력 권장</span><span>필수</span></div>
+        <p class="one" id="v-one"></p>
+        <div class="facts">
+          <div class="fact"><span>법정 장부 의무</span><b id="f-duty">-</b></div>
+          <div class="fact"><span>성실신고확인 대상</span><b id="f-sincere">-</b></div>
+        </div>
+      </div>
+
+      <div class="card panel benefit" id="benefit-panel">
+        <h3>받을 수 있는 세금 혜택</h3>
+        <div class="bens" id="bens"></div>
+        <p class="disc" id="ben-note" style="margin-top:12px"></p>
+      </div>
+
+      <div class="card panel" id="prog-panel">
+        <h3>청년 창업자 지원사업</h3>
+        <p class="disc" style="margin-bottom:12px">세금과 별개로 신청해서 받는 자금·보증입니다. 지원사업의 청년은 대부분 신청일 기준 만 39세 이하로, 창업 세액감면의 청년 기준(만 34세, 군 복무 반영)과 다릅니다. 해마다 공고 시기와 조건이 바뀌니 공고문을 꼭 확인하세요.</p>
+        <div class="progs" id="progs"></div>
+      </div>
+
+      <div class="card panel">
+        <h3>이렇게 판단했습니다</h3>
+        <ul class="reasons" id="reasons"></ul>
+      </div>
+
+      <div class="card panel">
+        <h3>기장을 하지 않으면</h3>
+        <div class="loss" id="loss"></div>
+      </div>
+
+      <div class="card panel">
+        <h3>기장을 맡기려면</h3>
+        <p class="disc" style="font-size:14px;color:var(--ink);margin-bottom:12px">홈택스 수임동의만 하시면 자료 수집부터 신고까지 해양세무회계가 맡습니다. 기장료는 업종과 거래량을 보고 상담에서 안내해 드립니다.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://map.naver.com/p/entry/place/1714950850?placePath=%2Fticket" target="_blank" rel="noopener">상담 예약</a>
+          <a class="btn" href="https://tax.appplay.co.kr/atc_0001_00.act?USE_INTT_ID=UTLZ_2509030913643" target="_blank" rel="noopener">홈택스 수임동의</a>
+        </div>
+        <p class="disc" style="margin-top:14px">2026년 현행 소득세법 기준의 일반적인 판단입니다. 여러 업종을 함께 하는 경우, 업종을 바꾼 경우, 공동사업 등은 기준이 달라질 수 있어 상담으로 확인해 드립니다. 입력한 내용은 저장되지 않습니다.</p>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<a class="mbar" href="#result"><span>진단 결과 보기 ↓</span><b id="m-big">-</b></a>
+
+<footer>
+  <div class="wrap">해양세무회계 · 대표 세무사 오관열 · 070-4772-0448 · 부산광역시 부산진구 가야대로703번길 15, 5층</div>
+</footer>
+
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const val=n=>{const el=document.querySelector(`input[name=${n}]:checked`);return el?el.value:null};
+  const num=v=>parseInt(String(v).replace(/[^0-9]/g,''),10)||0;
+  const EOK=1e8, MAN=1e4;
+  function kor(n){if(!n)return'';const e=Math.floor(n/EOK),m=Math.floor(n%EOK/MAN);return [e?e.toLocaleString('ko-KR')+'억':'',m?m.toLocaleString('ko-KR')+'만':''].filter(Boolean).join(' ')+' 원'}
+  function short(n){return n>=EOK?(n/EOK).toLocaleString('ko-KR',{maximumFractionDigits:1})+'억 원':(n/MAN).toLocaleString('ko-KR')+'만 원'}
+
+  // 업종군별 기준 (직전연도 수입금액)
+  const STD={
+    1:{name:'도소매·농업 등',double:3*EOK, simple:6000*MAN, sincere:15*EOK},
+    2:{name:'제조·음식·건설 등',double:1.5*EOK, simple:3600*MAN, sincere:7.5*EOK},
+    3:{name:'서비스·임대·교육 등',double:7500*MAN, simple:2400*MAN, sincere:5*EOK}
+  };
+  const SMALL=4800*MAN; // 무기장가산세 제외 소규모사업자
+  const LEVELS=[
+    {t:'선택',c:'var(--ok)',one:'지금은 매달 기장보다 1년에 한 번 종합소득세 신고만 맡겨도 충분한 규모입니다.'},
+    {t:'권장',c:'var(--amber)',one:'법적 의무는 아니지만 장부를 쓰는 쪽이 세금이나 관리 면에서 유리할 가능성이 큽니다.'},
+    {t:'강력 권장',c:'var(--signal)',one:'장부를 쓰지 않으면 놓치는 공제와 가산세 위험이 큰 단계입니다. 월 기장을 맡기시길 권합니다.'},
+    {t:'필수',c:'var(--signal)',one:'법에서 복식부기 장부를 의무로 정한 사업자입니다. 매달 장부 정리가 필요합니다.'}
+  ];
+
+  function diagnose(i){
+    const R=[], L=[];
+    let duty, dutyShort, level=0, sincere='해당 없음';
+
+    if(i.form==='corp'){
+      duty='법인 (복식부기)';level=3;
+      R.push(['hi','법인은 매출과 관계없이 복식부기로 장부를 쓰고 재무제표를 내야 합니다.']);
+      L.push(['','장부 없이 법인세를 신고하면 무기장가산세와 함께 추계 결정으로 세금이 크게 늘 수 있습니다.']);
+      if(i.emp>0) R.push(['md','직원이 있어 매달 원천세 신고, 연말정산, 4대보험 관리가 함께 필요합니다.']);
+      return {duty,level,sincere:'법인은 별도 기준',R,L};
+    }
+    if(i.sector==='4'){
+      duty='복식부기의무자';level=3;
+      R.push(['hi','전문직 사업자는 매출과 관계없이 복식부기의무자입니다.']);
+      L.push(['','장부 없이 추계로 신고하면 무신고로 보아 무신고가산세(세액의 20% 또는 매출의 0.07% 중 큰 금액)와 무기장가산세가 붙습니다.']);
+      const sc=i.open!=='new'&&i.rev>=5*EOK?'대상':'해당 없음';
+      if(sc==='대상') R.push(['hi','작년 매출이 5억 원 이상이라 성실신고확인 대상입니다. 신고기한이 6월 말까지입니다.']);
+      return {duty,level,sincere:sc,R,L};
+    }
+
+    const s=STD[i.sector];
+    const rev=i.rev;
+    if(i.open==='new'){
+      duty='간편장부대상자';
+      R.push(['lo','올해 개업한 개인사업자는 첫해에는 간편장부대상자입니다.']);
+      if(rev>=s.double){level=Math.max(level,2);R.push(['hi',`올해 예상 매출(${short(rev)})이 ${s.name} 복식부기 기준 ${short(s.double)} 이상입니다. 내년부터 복식부기의무자가 되니 올해부터 장부를 맞춰 두는 것이 안전합니다.`])}
+      else if(rev>=s.double*0.8){level=Math.max(level,1);R.push(['md',`올해 예상 매출이 복식부기 기준(${short(s.double)})에 가깝습니다. 매출이 조금만 늘어도 내년 의무가 바뀝니다.`])}
+    }else{
+      if(rev>=s.double){duty='복식부기의무자';level=3;R.push(['hi',`작년 매출 ${short(rev)}이 ${s.name} 기준 ${short(s.double)} 이상이라 올해는 복식부기의무자입니다.`]);
+        L.push(['','복식부기의무자가 장부 없이 신고하면 무신고로 처리되어 무신고가산세(세액의 20% 또는 매출의 0.07% 중 큰 금액)가 붙고, 중소기업 특별세액감면 같은 혜택도 받을 수 없습니다.']);}
+      else{duty='간편장부대상자';R.push(['lo',`작년 매출 ${short(rev)}이 ${s.name} 복식부기 기준 ${short(s.double)} 미만이라 간편장부대상자입니다.`]);
+        if(rev>=s.double*0.8){level=Math.max(level,1);R.push(['md',`복식부기 기준의 80%를 넘었습니다. 올해 매출이 기준을 넘으면 내년부터 복식부기의무자가 됩니다.`])}
+        if(i.grow&&rev>=s.double*0.6){level=Math.max(level,1)}
+      }
+      if(rev>=s.sincere){sincere='대상';level=3;R.push(['hi',`작년 매출이 성실신고확인 기준 ${short(s.sincere)} 이상입니다. 종합소득세 신고 때 세무사의 성실신고확인서가 필요하고 신고기한이 6월 말까지입니다.`])}
+      else if(rev>=s.sincere*0.8){sincere='근접';R.push(['md',`성실신고확인 기준(${short(s.sincere)})에 가깝습니다. 법인 전환 여부를 미리 검토해 볼 시점입니다.`])}
+    }
+
+    if(level<3){
+      let pts=0;
+      if(i.emp===1){pts+=2;R.push(['md','직원이 있어 매달 원천세 신고와 4대보험 취득·상실 신고가 필요합니다. 기장과 함께 맡기면 편합니다.'])}
+      if(i.emp===5){pts+=3;R.push(['hi','직원이 5명 이상이라 급여·원천세·4대보험·연말정산 업무가 상당합니다.'])}
+      if(i.cost){pts+=2;R.push(['md','실제 경비가 크면 장부로 경비를 인정받는 쪽이 정해진 비율(경비율)로 계산하는 추계보다 세금이 적게 나오는 경우가 많습니다.'])}
+      if(i.loss){pts+=2;R.push(['md','장부가 있어야 적자(결손금)를 이후 15년 동안 이익에서 빼 세금을 줄일 수 있습니다.'])}
+      if(i.loan){pts+=2;R.push(['md','대출·정책자금·보증 심사에는 재무제표가 필요합니다. 매달 장부가 있으면 바로 낼 수 있습니다.'])}
+      if(i.inv){pts+=1;R.push(['lo','세금계산서를 매달 주고받으면 부가세 신고 때 매입세액 누락을 막기 위해 월별 정리가 도움이 됩니다.'])}
+      if(i.grow){pts+=1;R.push(['lo','매출이 늘면 장부 의무가 바뀔 수 있어 미리 장부 체계를 갖춰 두는 것이 좋습니다.'])}
+      if(rev>=SMALL){pts+=1}
+      if(i.hire){pts+=2;R.push(['md','직원을 늘리면 통합고용세액공제를 받을 수 있지만, 매달 상시근로자 수를 정확히 관리해야 합니다.'])}
+      if(i.y5&&i.busan&&i.sector!=='4'){pts+=1;R.push(['lo','부산 창업 5년 이내라 창업중소기업 세액감면 대상일 수 있습니다. 소득을 정확히 계산할수록 감면액도 정확해집니다.'])}
+      const byPts=pts>=5?2:pts>=2?1:0;
+      level=Math.max(level,byPts);
+    }
+
+    if(level===3&&i.emp>0) R.push(['md',i.emp===5?'직원이 5명 이상이라 급여·원천세·4대보험·연말정산 업무도 매달 함께 처리해야 합니다.':'직원이 있어 매달 원천세 신고와 4대보험 관리도 함께 필요합니다.']);
+    if(duty==='간편장부대상자'){
+      if(i.open==='new'||rev<SMALL) L.push(['g','개업 첫해이거나 매출 4,800만 원 미만인 소규모 사업자는 장부가 없어도 무기장가산세는 붙지 않습니다.']);
+      else L.push(['','장부 없이 신고하면 무기장가산세로 산출세액의 20%가 더해집니다.']);
+      L.push(['g','간편장부대상자가 복식부기로 신고하면 기장세액공제로 산출세액의 20%(최대 100만 원)를 돌려받습니다.']);
+      if(i.cost) L.push(['','실제 경비가 큰데 장부 없이 추계로 신고하면 실제보다 이익이 크게 잡혀 세금을 더 낼 수 있습니다.']);
+      if(i.loss) L.push(['','장부가 없으면 올해 적자를 다음 해 이익에서 뺄 수 없습니다.']);
+    }
+    return {duty,level,sincere,R,L};
+  }
+
+  function fullYears(a,b){let y=b.getFullYear()-a.getFullYear();const t=new Date(a);t.setFullYear(a.getFullYear()+y);if(t>b)y--;return y}
+  function ages(){
+    const b=new Date($('d-birth').value+'T00:00:00'), r=new Date($('d-reg').value+'T00:00:00'), now=new Date();now.setHours(0,0,0,0);
+    const mil=Math.min(num($('mil').value),72);
+    if(isNaN(b)||isNaN(r)) return {ok:false,y5:true,young:false,y3:false,ageNow:null};
+    const ageReg=fullYears(b,r), ageNow=fullYears(b,now);
+    const milOk=fullYears(b,new Date(r.getFullYear(),r.getMonth()-mil,r.getDate()))<=34; // 병역기간을 뺀 나이로 판정
+    const young=ageReg<=34||(mil>0&&milOk);
+    const youngNow=ageNow<=34||(mil>0&&fullYears(b,new Date(now.getFullYear(),now.getMonth()-mil,now.getDate()))<=34);
+    const bizY=(now-r)/(365.25*864e5);
+    return {ok:true,ageReg,ageNow,young,youngNow,y5:bizY>=0&&bizY<5,y3:bizY>=0&&bizY<3,y7:bizY>=0&&bizY<7,bizY,mil};
+  }
+  // 2026년 현행: 창업중소기업 세액감면(조특법 6조), 통합고용세액공제(조특법 29조의8, 2026.1.1 이후 개시 과세연도 개편분)
+  function benefits(i){
+    const out=[];let note=[];
+    const exclSector=i.sector==='4'; // 전문직은 창업감면 업종 아님
+    if(i.y5){
+      if(exclSector){out.push({off:1,t:'창업중소기업 세액감면',v:'대상 업종 아님',d:'의료·법률·세무 등 전문직은 창업 감면 업종에서 빠집니다.'})}
+      else if(!i.busan){out.push({off:1,t:'창업중소기업 세액감면',v:'지역 확인 필요',d:'수도권은 2026년 이후 창업분부터 감면율이 낮아지거나 없어집니다. 상담으로 확인해 드립니다.'})}
+      else{
+        const small=i.rev<=104000000;
+        const rate=(i.young||small)?100:50;
+        const why=i.young?`청년 창업(등록 당시 만 ${i.ageReg}세)`:small?'연 매출 1억 400만 원 이하 생계형 창업':'일반 창업';
+        out.push({t:'창업중소기업 세액감면',v:`${i.form==='corp'?'법인세':'소득세'} ${rate}% 감면`,d:`부산(수도권 밖) ${why}은 소득이 처음 생긴 해부터 5년 동안 ${i.form==='corp'?'법인세':'종합소득세'}의 ${rate}%를 감면받습니다.${rate===50?' 사업자등록 당시 만 34세 이하(군 복무 기간만큼 최대 40세)였다면 100%입니다.':''} 부동산임대업·유흥업 등 일부 업종은 제외됩니다.`});
+      }
+    }
+    if(i.ok&&!i.y5&&!exclSector){out.push({off:1,t:'창업중소기업 세액감면',v:'기간 지남',d:'창업 감면은 소득이 처음 생긴 해부터 5년 동안만 받을 수 있습니다.'})}
+    if(i.hire){
+      const loc=i.busan;
+      const g=loc?[700,1200,1300]:[400,900,1000], p=loc?[1000,1900,2000]:[700,1600,1700];
+      out.push({t:'통합고용세액공제',v:`1인당 최대 연 ${p[2].toLocaleString('ko-KR')}만 원`,d:`작년보다 상시근로자(4대보험 가입)가 1명 늘 때마다, ${loc?'지방':'수도권'} 중소기업 기준 1년차 ${g[0]}만 원·2년차 ${g[1].toLocaleString('ko-KR')}만 원·3년차 ${g[2].toLocaleString('ko-KR')}만 원을 세금에서 뺍니다. 청년·60세 이상·장애인·경력단절자는 ${p[0].toLocaleString('ko-KR')}만 → ${p[1].toLocaleString('ko-KR')}만 → ${p[2].toLocaleString('ko-KR')}만 원입니다. 2026년부터 오래 고용할수록 공제가 커지는 구조로 바뀌었습니다.`});
+    }
+    if(out.some(o=>!o.off&&o.t.startsWith('창업'))&&i.hire) note.push('2025년 이후 창업한 기업은 창업 감면과 고용 공제를 함께 받을 수 없어 둘 중 유리한 쪽을 골라야 합니다. 어느 쪽이 큰지는 세액을 계산해 봐야 압니다.');
+    if(out.some(o=>!o.off)) note.push('두 혜택 모두 정확한 소득 계산과 월별 상시근로자 수 관리가 있어야 받을 수 있고, 신고 때 직접 신청해야 합니다. 놓치면 경정청구로 5년 안에 돌려받을 수 있습니다.');
+    return {out,note:note.join(' ')};
+  }
+
+  // 2026년 공고 기준 청년 창업 지원사업 (조건은 해마다 바뀜)
+  function programs(i){
+    if(!i.ok) return [];
+    const yy=i.ageNow<=39; // 지원사업 청년: 공고 기준 대부분 만 39세 이하 (세액감면 청년 34세와 다름)
+    const list=[
+      {t:'청년창업사관학교 (중소벤처기업진흥공단)',ok:yy&&i.y3,d:'만 39세 이하, 창업 3년 이내 대표자. 사업화 자금 최대 1억 원(평균 7천만 원, 총사업비의 70%)과 사무공간·교육·멘토링을 지원합니다. 매년 1~2월 모집.',why:!yy?'신청 시점 만 39세 이하만 가능합니다.':'창업 3년 이내 기업이 대상입니다.',url:'https://www.kosmes.or.kr',site:'중진공'},
+      {t:'청년전용창업자금 (중진공 정책자금)',ok:yy&&i.y3,d:'만 39세 이하, 업력 3년 미만. 최대 1억 원을 연 2.5% 고정금리로 빌려줍니다(2026년 공고 기준). 지역 본부별 선착순 접수가 많습니다.',why:!yy?'대표자가 만 39세 이하여야 합니다.':'업력 3년 미만 기업이 대상입니다.',url:'https://www.kosmes.or.kr',site:'중진공'},
+      {t:'신용보증기금 청년창업 우대보증',ok:yy&&i.y7,d:'대표자 만 39세 이하 창업기업. 은행 협약 상품은 3억 원 이하 보증을 3년간 100% 보증하고 보증료를 감면해 줍니다. 은행 대출 받을 때 담보 역할을 합니다.',why:!yy?'대표자가 만 39세 이하여야 합니다.':'창업 초기 기업 위주로 지원합니다.',url:'https://www.kodit.co.kr',site:'신용보증기금'},
+      {t:'초기창업패키지 (창업진흥원)',ok:i.y3,d:'나이와 관계없이 창업 3년 이내 기업. 사업화 자금 최대 1억 원 내외와 판로·투자 연계를 지원합니다. 매년 상반기 K-Startup에 공고.',why:'창업 3년 이내 기업이 대상입니다.',url:'https://www.k-startup.go.kr',site:'K-Startup'}
+    ];
+    return list;
+  }
+
+  function read(){return{form:val('form'),sector:val('sector'),open:val('open'),rev:num($('rev').value),emp:+val('emp'),cost:$('c-cost').checked,loss:$('c-loss').checked,loan:$('c-loan').checked,inv:$('c-inv').checked,grow:$('c-grow').checked,busan:$('c-busan').checked,hire:$('c-hire').checked,...ages()}}
+
+  function render(){
+    const el=$('rev');const n=num(el.value);el.value=n?n.toLocaleString('ko-KR'):'';$('rev-kor').textContent=kor(n);
+    const i=read();
+    const corp=i.form==='corp';
+    $('q-sector').hidden=corp;$('q-open').hidden=corp;
+    $('rev-title').textContent=i.open==='new'&&!corp?'올해 예상 연 매출':'작년 연 매출';
+    const r=diagnose(i);
+    const lv=LEVELS[r.level];
+    $('v-big').textContent=lv.t;$('m-big').textContent=lv.t;
+    $('v-one').textContent=lv.one;
+    $('meter').style.setProperty('--lv',lv.c);
+    [...$('meter').children].forEach((x,k)=>x.classList.toggle('on',k<=r.level));
+    const Y=$('youth');Y.innerHTML='';
+    if(i.ok){
+      const a=document.createElement('div');a.className=i.young?'y':'';a.innerHTML='창업 세액감면 청년 (등록일 기준 만 34세)<b></b>';a.querySelector('b').textContent=`만 ${i.ageReg}세 · ${i.young?'청년 창업자':'청년 아님'}${i.young&&i.ageReg>34?' (군 복무 반영)':''}`;
+      const c=document.createElement('div');c.className=i.ageNow<=39?'y':'';c.innerHTML='창업 지원사업 (지금 기준 만 39세)<b></b>';c.querySelector('b').textContent=`만 ${i.ageNow}세 · 업력 ${i.bizY<1?'1년 미만':Math.floor(i.bizY)+'년'} · ${i.ageNow<=39?'만 39세 이하 · 지원 대상':'만 39세 초과'}`;
+      Y.append(a,c);
+    }
+    const PR=programs(i);const pg=$('progs');pg.innerHTML='';
+    PR.forEach(o=>{const d=document.createElement('div');d.className='prog'+(o.ok?'':' no');const t=document.createElement('span');t.className='tag '+(o.ok?'y':'n');t.textContent=o.ok?'신청 가능':'해당 안 됨';const box=document.createElement('div');const b1=document.createElement('b');b1.textContent=o.t;const p1=document.createElement('p');p1.textContent=o.ok?o.d:o.why;box.append(b1,p1);if(o.ok&&o.url){const a1=document.createElement('a');a1.href=o.url;a1.target='_blank';a1.rel='noopener';a1.textContent=o.site+' →';box.appendChild(a1)}d.append(t,box);pg.appendChild(d)});
+    const B=benefits(i);const bx=$('bens');bx.innerHTML='';
+    $('benefit-panel').hidden=!B.out.length;
+    B.out.forEach(o=>{const d=document.createElement('div');d.className='ben'+(o.off?' off':'');const t=document.createElement('div');t.className='t';const b1=document.createElement('b');b1.textContent=o.t;const s1=document.createElement('strong');s1.textContent=o.v;t.append(b1,s1);const p1=document.createElement('p');p1.textContent=o.d;d.append(t,p1);bx.appendChild(d)});
+    $('ben-note').textContent=B.note;
+    $('f-duty').textContent=r.duty;$('f-sincere').textContent=r.sincere;
+    const ul=$('reasons');ul.innerHTML='';
+    r.R.forEach(([c,t])=>{const li=document.createElement('li');li.className=c;li.textContent=t;ul.appendChild(li)});
+    const lo=$('loss');lo.innerHTML='';
+    (r.L.length?r.L:[['g','특별한 불이익은 없지만, 신고 때 놓치는 경비가 없도록 영수증과 거래내역은 꼭 모아 두세요.']]).forEach(([c,t])=>{const d=document.createElement('div');if(c)d.className=c;d.textContent=t;lo.appendChild(d)});
+  }
+  $('d-reg').addEventListener('change',()=>{const r=new Date($('d-reg').value+'T00:00:00');if(!isNaN(r)){const n=r.getFullYear()===new Date().getFullYear();$(n?'o-new':'o-old').checked=true}});
+  $('form').addEventListener('input',render);$('form').addEventListener('change',render);$('form').addEventListener('submit',e=>e.preventDefault());
+  window.__diag=diagnose;
+  render();
+})();
+</script>
+</body>
+</html>
