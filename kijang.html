@@ -12,24 +12,27 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@600;700&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&family=Noto+Serif+KR:wght@500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 :root{
   color-scheme:light;
-  --ink:#0B2433;--paper:#EEF3F2;--surface:#F8FBFA;--line:#C5D5D5;--muted:#557077;
-  --tide:#2B7A78;--tide-soft:#D6E8E6;--signal:#D9542B;--signal-soft:#F6E1D8;--ok:#2E7D4F;--ok-soft:#DCEFE3;--amber:#B7791F;--amber-soft:#F5EAD3;
-  --serif:"Hahmlet","Nanum Myeongjo",serif;
-  --sans:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --ink:#0B2A4A;--text:#2B2F33;--paper:#F6F2EA;--surface:#FFFDF8;--line:#E3DBCB;--muted:#6A6E72;--gold:#C9A45C;
+  --tide:#1E6FA8;--tide-soft:#E4EEF6;--signal:#B8572F;--signal-soft:#F6E1D8;--ok:#2E7D4F;--ok-soft:#DCEFE3;--amber:#B7791F;--amber-soft:#F5EAD3;
+  --serif:"Pretendard","Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --sans:"Pretendard","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
   padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
 }
 @media (prefers-color-scheme:dark){
-  :root{color-scheme:dark;--ink:#E3ECEC;--paper:#0A1C26;--surface:#10293A;--line:#23445A;--muted:#8FA9AE;
-  --tide:#5FB3AE;--tide-soft:#15394A;--signal:#F07A4F;--signal-soft:#3A2419;--ok:#6CC08E;--ok-soft:#173526;--amber:#E0A84E;--amber-soft:#3A2E17}
+  :root{color-scheme:dark;--ink:#E8EEF5;--text:#D9DEE3;--paper:#0A1A2C;--surface:#102540;--line:#21395A;--muted:#9AA7B4;--gold:#D7B676;
+  --tide:#6FB0E0;--tide-soft:#14304F;--signal:#E8875C;--signal-soft:#3A2419;--ok:#6CC08E;--ok-soft:#173526;--amber:#E0A84E;--amber-soft:#3A2E17}
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;word-break:keep-all}
 a{color:inherit}
+p,li,dd{color:var(--text)}
+h1,h2,h3{letter-spacing:-.02em}
 :focus-visible{outline:2px solid var(--signal);outline-offset:2px;border-radius:3px}
 [hidden]{display:none!important}
 .wrap{max-width:1120px;margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
@@ -174,7 +177,7 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
 <header class="top">
   <div class="wrap">
     <a class="brand" href="/" aria-label="해양세무회계 홈으로">
-      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="17" r="9" fill="none" stroke="currentColor" stroke-width="2.4"/><line x1="13" y1="4.5" x2="27" y2="4.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M4 32c4-3 8-3 12 0s8 3 12 0 8-3 8-1" fill="none" stroke="#D9542B" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="17" r="9" fill="none" stroke="currentColor" stroke-width="2.4"/><line x1="13" y1="4.5" x2="27" y2="4.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M4 32c4-3 8-3 12 0s8 3 12 0 8-3 8-1" fill="none" stroke="#C9A45C" stroke-width="2.4" stroke-linecap="round"/></svg>
       <span><b>해양세무회계</b><small>세무사 오관열</small></span>
     </a>
     <a class="back" href="/#tools">← 다른 도구 보기</a>
