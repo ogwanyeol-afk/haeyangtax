@@ -19,37 +19,50 @@
 </script>
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>해양세무회계 | 부산 서면 세무사 오관열</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@400;600;700&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&family=Noto+Serif+KR:wght@500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 :root{
-  --ink:#0B2433;
-  --paper:#EEF3F2;
-  --surface:#F8FBFA;
-  --line:#C5D5D5;
-  --muted:#557077;
-  --tide:#2B7A78;
-  --tide-soft:#D6E8E6;
-  --signal:#D9542B;
-  --contour:rgba(43,122,120,.28);
-  --serif:"Hahmlet","Nanum Myeongjo",serif;
-  --sans:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --ink:#0B2A4A;--text:#2B2F33;--paper:#F6F2EA;--surface:#FFFDF8;--line:#E3DBCB;--muted:#6A6E72;
+  --tide:#1E6FA8;--tide-soft:#E4EEF6;--signal:#C9A45C;--gold:#C9A45C;--contour:rgba(30,111,168,.20);
+  --serif:"Pretendard","Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --sans:"Pretendard","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --formal:"Noto Serif KR",serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
     color-scheme:dark;
-    --ink:#E3ECEC;--paper:#0A1C26;--surface:#10293A;--line:#23445A;--muted:#8FA9AE;
-    --tide:#5FB3AE;--tide-soft:#15394A;--signal:#F07A4F;--contour:rgba(95,179,174,.22);
+    --ink:#E8EEF5;--text:#D9DEE3;--paper:#0A1A2C;--surface:#102540;--line:#21395A;--muted:#9AA7B4;
+    --tide:#6FB0E0;--tide-soft:#14304F;--signal:#D7B676;--gold:#D7B676;--contour:rgba(111,176,224,.18);
   }
 }
 :root[data-theme="dark"]{
   color-scheme:dark;
-  --ink:#E3ECEC;--paper:#0A1C26;--surface:#10293A;--line:#23445A;--muted:#8FA9AE;
-  --tide:#5FB3AE;--tide-soft:#15394A;--signal:#F07A4F;--contour:rgba(95,179,174,.22);
+  --ink:#E8EEF5;--text:#D9DEE3;--paper:#0A1A2C;--surface:#102540;--line:#21395A;--muted:#9AA7B4;
+  --tide:#6FB0E0;--tide-soft:#14304F;--signal:#D7B676;--gold:#D7B676;--contour:rgba(111,176,224,.18);
 }
 *{box-sizing:border-box}
+p,li,dd{color:var(--text)}
+h1,h2,h3{letter-spacing:-.02em}
+.hero h1{font-weight:800}
+.pt-award{background:var(--gold)!important;color:#0B2A4A!important}
+.ach{color:var(--ink)!important;border-color:var(--gold)!important;background:color-mix(in srgb,var(--gold) 18%,transparent)}
+.cb-figs li{border-left-color:var(--gold)!important}
+.timeline li.now::before{background:var(--gold)!important;border-color:var(--gold)!important}
+.big-client::before{background:var(--gold)!important}
+.svc article.key h3::after{color:var(--ink)!important;border-color:var(--gold)!important;background:color-mix(in srgb,var(--gold) 18%,transparent)}
+.promise{background:var(--surface);border-bottom:1px solid var(--line)}
+.promise .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.promise .pv{padding:26px 24px;border-left:1px solid var(--line)}
+.promise .pv:first-child{border-left:0;padding-left:0}
+.promise .pv span{font-family:var(--formal);font-size:28px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:10px}
+.promise .pv span::before{content:"";width:22px;height:2px;background:var(--gold)}
+.promise .pv p{font-size:14px;margin-top:6px}
+@media (max-width:760px){.promise .wrap{grid-template-columns:1fr}.promise .pv{border-left:0;border-top:1px solid var(--line);padding-inline:0}.promise .pv:first-child{border-top:0}}
+.slogan-foot{font-family:var(--formal);font-size:15px;color:var(--ink)}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7;word-break:keep-all}
@@ -104,6 +117,16 @@ nav.menu a:hover{color:var(--ink)}
 .timeline small{font-size:13px;color:var(--muted)}
 .acts{display:grid;gap:22px}
 .aw-photo{margin:0 0 -22px;border-radius:10px 10px 0 0;overflow:hidden;background:var(--ink)}
+.aw-img{position:relative}
+.pin{position:absolute;bottom:6%;transform:translateX(-50%);font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.pin::after{content:"";position:absolute;left:50%;bottom:100%;transform:translateX(-50%);border:5px solid transparent}
+.pin-c{left:49%;background:#C9A45C;color:#0B2A4A}
+.pin-c::after{border-bottom-color:#C9A45C}
+.pin-me{left:70%;background:#0B2A4A;color:#fff}
+.pin-me::after{border-bottom-color:#0B2A4A}
+@media (max-width:520px){.pin{font-size:10.5px;padding:2px 7px}}
+.aw-photo figcaption b{color:inherit;font-weight:700}
+.award p,.cbox p,.cbox li{color:inherit}
 .aw-photo img{display:block;width:100%;height:auto;aspect-ratio:681/380;object-fit:cover}
 .aw-photo figcaption{font-size:12px;padding:8px 20px 0;color:color-mix(in srgb,var(--paper) 70%,transparent)}
 .aw-photo + .award{border-radius:0 0 10px 10px}
@@ -251,7 +274,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
       <svg viewBox="0 0 40 40" aria-hidden="true">
         <circle cx="20" cy="17" r="9" fill="none" stroke="currentColor" stroke-width="2.4"/>
         <line x1="13" y1="4.5" x2="27" y2="4.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
-        <path d="M4 32c4-3 8-3 12 0s8 3 12 0 8-3 8-1" fill="none" stroke="#D9542B" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M4 32c4-3 8-3 12 0s8 3 12 0 8-3 8-1" fill="none" stroke="#C9A45C" stroke-width="2.4" stroke-linecap="round"/>
       </svg>
       <span><b>해양세무회계</b><small>세무사 오관열</small></span>
     </a>
@@ -272,9 +295,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
     <canvas id="chart" aria-hidden="true"></canvas>
     <div class="wrap">
       <div>
-        <span class="eyebrow">부산 서면 · 세무사 사무소</span>
-        <h1>세금의 물길을<br><em>미리 읽어</em> 드립니다</h1>
-        <p class="lede">기장과 신고는 정확하게, 양도·상속·증여와 가업승계는 수년 앞을 보고 설계합니다. 해양세무회계는 대표 세무사가 직접 상담하고, 직접 만든 AI 도구로 필요한 계산을 언제든 확인할 수 있게 합니다.</p>
+        <span class="eyebrow">부산 서면 · 해양세무회계 · 세무사 오관열</span>
+        <h1>세무사가<br><em>직접</em> 봅니다</h1>
+        <p class="lede">기장·신고 같은 반복 업무는 자동화로 정확하고 빠르게 처리하고, 상담과 판단, 국세청 대응은 제가 직접 맡습니다. 사업의 시작부터 상속·승계까지, 대표세무사가 처음부터 끝까지 챙기겠습니다.</p>
         <div class="ctas">
           <a class="btn primary" href="https://map.naver.com/p/entry/place/1714950850?placePath=%2Fticket" target="_blank" rel="noopener">상담 예약하기</a>
           <a class="btn ghost" href="#tools">AI 세무 도구 써보기</a>
@@ -288,6 +311,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
           <span class="pt-award">2025 국세청 선정 올해의 국선대리인</span>
         </figcaption>
       </figure>
+    </div>
+  </section>
+
+  <section class="promise" aria-label="고객 약속">
+    <div class="wrap">
+      <div class="pv"><span>직접</span><p>모든 신고서는 제가 최종 확인한 뒤 제출합니다.</p></div>
+      <div class="pv"><span>깊이</span><p>신고 대행을 넘어 매년 한 번 거래처별 세무 점검을 해 드립니다.</p></div>
+      <div class="pv"><span>동행</span><p>국세청 연락이 오면 바로 알려 드리고, 대응은 제가 직접 합니다.</p></div>
     </div>
   </section>
 
@@ -312,12 +343,16 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
         </div>
         <div class="acts">
           <figure class="aw-photo">
-            <img src="/award.jpg" alt="국세청 우수 국선대리인 감사패 수여식에서 국세청장과 함께한 오관열 세무사" width="681" height="380" loading="lazy">
-            <figcaption>국세청 우수 국선대리인 감사패 수여식 · 오른쪽에서 두 번째 오관열 세무사</figcaption>
+            <div class="aw-img">
+              <img src="/award.jpg" alt="임광현 국세청장(가운데)이 우수 국선대리인 오관열 세무사(오른쪽에서 두 번째)에게 감사패를 수여한 뒤 함께한 모습" width="681" height="380" loading="lazy">
+              <span class="pin pin-c">국세청장</span>
+              <span class="pin pin-me">오관열 세무사</span>
+            </div>
+            <figcaption><b>임광현 국세청장</b>이 직접 수여한 우수 국선대리인 감사패 · 국세청 본청</figcaption>
           </figure>
           <div class="award">
             <span class="aw-year">2025</span>
-            <div><b>국세청 선정 올해의 국선대리인</b><p>국세청장 표창</p></div>
+            <div><b>국세청 선정 올해의 국선대리인</b><p>국세청장 직접 수여 · 감사패</p></div>
           </div>
           <div class="act-group">
             <h3><span class="ach">대표 업적</span>세무조사·불복</h3>
@@ -527,6 +562,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 
 <footer>
   <div class="wrap">
+    <span class="slogan-foot">변하는 세법, 변하지 않는 책임</span>
     <span>해양세무회계 · 대표 세무사 오관열 · 부산광역시 부산진구 가야대로703번길 15, 5층</span>
     <span>TEL 070-4772-0448 · FAX 070-7966-0444 · <a href="https://blog.naver.com/ohtax_" target="_blank" rel="noopener">블로그</a></span>
   </div>
