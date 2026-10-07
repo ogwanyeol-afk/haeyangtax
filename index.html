@@ -269,6 +269,40 @@ label.f{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
 .consent p{font-size:14px;color:var(--muted);margin-top:4px;max-width:30em}
 footer{padding-block:40px;font-size:13px;color:var(--muted)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+/* ===== 판례·뉴스 ===== */
+.nw-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:40px;margin-top:28px}
+@media (max-width:900px){.nw-grid{grid-template-columns:1fr;gap:32px}}
+.nw-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:2px solid var(--ink);padding-bottom:10px}
+.nw-h h3{font-size:18px;margin:0;color:var(--ink)}
+.nw-h a{font-size:13px;color:var(--tide);text-decoration:none;font-weight:600;white-space:nowrap}
+.case{display:grid;grid-template-columns:92px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
+.case-tag{background:var(--ink);color:var(--paper);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12px 6px;min-height:92px;align-self:start}
+.case-tag .court{font-size:11px;font-weight:700;letter-spacing:.02em;padding:2px 8px;border-radius:999px;background:var(--gold);color:#0B2A4A}
+.case-tag.tt .court{background:#7FB3DA}
+.case-tag b{font-family:var(--mono);font-size:20px;margin-top:8px;color:var(--paper);line-height:1}
+.case-tag small{font-family:var(--mono);font-size:11px;opacity:.7;margin-top:4px;color:var(--paper)}
+.case h4{margin:0;font-size:16.5px;line-height:1.45;color:var(--ink)}
+.case h4 a{text-decoration:none;color:inherit}
+.case h4 a:hover{text-decoration:underline;text-underline-offset:3px}
+.case h4 .lbl{color:var(--tide);margin-right:4px}
+.case .sum{margin:8px 0 0;font-size:14px;line-height:1.65;color:var(--text);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.case.open .sum{-webkit-line-clamp:unset;display:block}
+.case .pt{margin:10px 0 0;font-size:13.5px;line-height:1.55;color:var(--ink);background:var(--tide-soft);border-radius:6px;padding:8px 12px}
+.case .pt b{color:var(--tide);margin-right:6px}
+.case .meta{margin-top:10px;font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 10px}
+.case .meta span+span::before{content:"|";margin-right:10px;color:var(--line)}
+.case .res-w{color:#2E7D4F;font-weight:600}
+.case .more{background:none;border:0;padding:0;margin-left:auto;font:inherit;font-size:12.5px;color:var(--tide);cursor:pointer}
+@media (max-width:520px){.case{grid-template-columns:64px 1fr;gap:12px}.case-tag{min-height:72px;padding:8px 4px}.case-tag b{font-size:16px}}
+.news-list{list-style:none;margin:0;padding:0}
+.news-list li{border-bottom:1px solid var(--line)}
+.news-list a{display:block;padding:13px 0;text-decoration:none;color:var(--ink)}
+.news-list a:hover .t{text-decoration:underline;text-underline-offset:3px}
+.news-list .t{display:block;font-size:14.5px;font-weight:600;line-height:1.5;color:var(--ink)}
+.news-list .s{display:block;font-size:12px;color:var(--muted);margin-top:4px}
+.news-list .s b{color:var(--tide);font-weight:600;margin-right:6px}
+.nw-empty{padding:18px 0;font-size:14px;color:var(--muted)}
+.nw-note{font-size:12px;color:var(--muted);margin-top:14px;line-height:1.6}
 </style>
 </head>
 <body>
@@ -286,6 +320,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
       <a href="#about">대표 세무사</a>
       <a href="#services">업무분야</a>
       <a href="#tools">고객 도구</a>
+      <a href="#news">판례·뉴스</a>
       <a href="#column">세무 칼럼</a>
       <a href="#process">상담 절차</a>
       <a href="#contact">연락처</a>
@@ -498,6 +533,26 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
     </div>
   </section>
 
+  <section class="block" id="news" data-nw-limit="3">
+    <div class="wrap">
+      <div class="head">
+        <div><span class="eyebrow">Tax News &amp; Cases</span><h2>판례·세무 뉴스</h2></div>
+        <p>새로 나온 대법원 판결과 조세심판원 결정 가운데 사업자와 자산가에게 중요한 것을 대표 세무사가 직접 골라 요약합니다. 세무 뉴스는 매일 자동으로 모아 드립니다.</p>
+      </div>
+      <div class="nw-grid">
+        <div>
+          <div class="nw-h"><h3>판례·심판례 해설</h3><a href="/news.html">전체 보기 →</a></div>
+          <div id="nw-cases"><p class="nw-empty">불러오는 중…</p></div>
+        </div>
+        <div>
+          <div class="nw-h"><h3>오늘의 세무 뉴스</h3><a href="/news.html#news-all">더 보기 →</a></div>
+          <div id="nw-news"><p class="nw-empty">불러오는 중…</p></div>
+          <p class="nw-note"><span id="nw-upd"></span><br>뉴스 제목을 누르면 해당 언론사 기사로 이동합니다. 판례 요약은 이해를 돕기 위한 것으로, 개별 사안에 그대로 적용되지 않을 수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="column">
     <div class="wrap">
       <div class="column">
@@ -654,6 +709,31 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
     const sel=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='선택됨'};
     try{navigator.clipboard.writeText(txt).then(done,sel)}catch(e){sel()}
   }));
+})();
+</script>
+<script>
+(function(){
+  var CN=document.getElementById('nw-cases'),NN=document.getElementById('nw-news');if(!CN&&!NN)return;
+  var L=document.querySelector('[data-nw-limit]'),LIM=L?+L.getAttribute('data-nw-limit'):0;
+  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function get(u,inline){if(window[inline])return Promise.resolve(window[inline]);return fetch(u+'?v='+Date.now().toString().slice(0,-5)).then(function(r){return r.json()})}
+  function caseHTML(c){
+    var d=(c.date||'').split('-'),tt=c.court.indexOf('심판')>-1,win=/승소|인용|취소/.test(c.result||'');
+    return '<article class="case"><div class="case-tag'+(tt?' tt':'')+'"><span class="court">'+esc(c.court)+'</span><b>'+esc(d[1]+'.'+d[2])+'</b><small>'+esc(d[0])+'</small></div><div>'+
+      '<h4><a href="'+esc(c.url)+'" target="_blank" rel="noopener"><span class="lbl">['+(tt?'심판례':'판례')+']</span>'+esc(c.title)+'</a></h4>'+
+      '<p class="sum">'+esc(c.summary)+'</p>'+(c.point?'<p class="pt"><b>실무 포인트</b>'+esc(c.point)+'</p>':'')+
+      '<div class="meta"><span>'+esc(c.tax)+'</span><span>'+esc(c.no)+'</span><span class="'+(win?'res-w':'')+'">'+esc(c.result)+'</span><button class="more" type="button">전체 요약 ▾</button></div></div></article>';
+  }
+  if(CN)get('/cases.json','HY_CASES').then(function(d){
+    var it=(d.items||[]).slice().sort(function(a,b){return a.date<b.date?1:-1});if(LIM)it=it.slice(0,LIM);
+    CN.innerHTML=it.length?it.map(caseHTML).join(''):'<p class="nw-empty">곧 판례 소식이 올라옵니다.</p>';
+    CN.addEventListener('click',function(e){var b=e.target.closest('.more');if(!b)return;var a=b.closest('.case');a.classList.toggle('open');b.textContent=a.classList.contains('open')?'접기 ▴':'전체 요약 ▾'});
+  }).catch(function(){CN.innerHTML='<p class="nw-empty">판례 소식을 불러오지 못했습니다.</p>'});
+  if(NN)get('/news.json','HY_NEWS').then(function(d){
+    var it=d.items||[];var n=LIM?Math.min(it.length,LIM*2+2):it.length;
+    NN.innerHTML=it.length?'<ul class="news-list">'+it.slice(0,n).map(function(x){return '<li><a href="'+esc(x.url)+'" target="_blank" rel="noopener"><span class="t">'+esc(x.title)+'</span><span class="s"><b>'+esc(x.source)+'</b>'+esc(x.date.slice(5,16).replace('-','.'))+'</span></a></li>'}).join('')+'</ul>':'<p class="nw-empty">뉴스 목록을 준비 중입니다. 매일 오전 7시·오후 5시에 자동으로 갱신됩니다.</p>';
+    var u=document.getElementById('nw-upd');if(u&&d.updated)u.textContent='뉴스 갱신 '+d.updated;
+  }).catch(function(){NN.innerHTML='<p class="nw-empty">뉴스 목록을 불러오지 못했습니다.</p>'});
 })();
 </script>
 </body>
