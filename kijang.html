@@ -247,7 +247,12 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
       <div class="q">
         <h2><span>07</span>창업 정보</h2>
         <p class="hint">창업 감면과 청년 여부를 판단합니다.</p>
-        <label class="check"><input type="checkbox" id="c-busan" checked><span>사업장이 부산(수도권 밖)에 있다</span></label>
+        <div><label class="f" for="region">사업장 지역</label><select id="region">
+          <option value="out" selected>수도권 밖 (부산 등 지방)</option>
+          <option value="pop">수도권 인구감소지역 (인천 강화·옹진, 경기 가평·연천)</option>
+          <option value="cap">수도권 그 밖의 지역 (과밀억제권역·인구감소지역 제외)</option>
+          <option value="dense">수도권과밀억제권역 (서울, 인천 대부분, 경기 수원·성남 등)</option>
+        </select><p class="hint">창업 감면율은 창업 지역과 창업 시기(2026년 전·후)에 따라 100%·75%·50%·25%로 달라집니다.</p></div>
         <div class="ymd-row">
           <div><span class="f">대표자 생년월일</span><input type="hidden" id="d-birth" value="1994-05-10"><div class="ymd" data-for="d-birth" data-min="1940" data-max="-15"></div></div>
           <div><span class="f">사업자등록 신청일 <small>(법인은 설립등기일)</small></span><input type="hidden" id="d-reg" value="2024-03-04"><div class="ymd" data-for="d-reg" data-min="1980" data-max="0"></div></div>
@@ -263,8 +268,8 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
         <h2><span>08</span>절세 혜택 찾기</h2>
         <p class="hint">요즘 세무사들이 많이 소개하는 감면·공제를 한 번에 확인합니다. 업종은 02번에서 고른 업종으로 판정하며, 모르는 칸은 0으로 두세요.</p>
         <div class="dates">
-          <div><label class="f" for="h-y">늘린 직원 · 청년 등</label><div class="money"><input id="h-y" inputmode="numeric" value="1"><span>명</span></div><p class="hint">15~34세·60세 이상·장애인·경력단절</p></div>
-          <div><label class="f" for="h-g">늘린 직원 · 그 외</label><div class="money"><input id="h-g" inputmode="numeric" value="1"><span>명</span></div><p class="hint">작년보다 늘어난 4대보험 인원</p></div>
+          <div><label class="f" for="h-y">늘린 직원 · 청년 등</label><div class="money"><input id="h-y" inputmode="numeric" value="0"><span>명</span></div><p class="hint">15~34세·60세 이상·장애인·경력단절</p></div>
+          <div><label class="f" for="h-g">늘린 직원 · 그 외</label><div class="money"><input id="h-g" inputmode="numeric" value="0"><span>명</span></div><p class="hint">작년보다 늘어난 4대보험 인원</p></div>
           <div></div>
         </div>
         <div class="dates two">
@@ -470,13 +475,33 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
     if(i.y5){
       if(exclSector){out.push({off:1,t:'창업중소기업 세액감면',v:'대상 업종 아님',d:`${i.k.name}은(는) 창업 감면 업종에 들어가지 않습니다. 도소매업(통신판매업 제외), 부동산업, 주점업, 금융업, 전문직 서비스 등이 제외됩니다.`})}
       else if(partSector){out.push({off:1,t:'창업중소기업 세액감면',v:'일부 업종만 해당',d:(i.k.note||'세부 업종에 따라 다릅니다.')+' 상담으로 확인해 드립니다.'})}
-      else if(!loc){out.push({off:1,t:'창업중소기업 세액감면',v:'지역 확인 필요',d:'수도권은 2026년 이후 창업분부터 감면율이 낮아지거나 없어집니다. 상담으로 확인해 드립니다.'})}
       else{
-        startup=true;
-        const small=i.rev<=104000000, rate=(i.young||small)?100:50;
-        const why=i.young?`청년 창업(등록 당시 만 ${i.ageReg}세${i.ageReg>34?`, 군 복무 ${i.mil}개월 반영`:''})`:small?'연 매출 1억 400만 원 이하 생계형 창업':'일반 창업';
+        // 조특법 6조 ①1호·⑥ (2026.1.1 이후 창업분 개정), 시행령 5조 ①(청년: 창업 당시 15~34세, 병역 최대 6년 차감)
+        const rv=$('d-reg').value, after26=rv>='2026-01-01';
+        const R=i.region||'out';
+        const tbl=after26
+          ?{out:[100,100,50],pop:[100,100,50],cap:[75,75,25],dense:[50,50,0]}
+          :{out:[100,100,50],pop:[100,100,50],cap:[100,100,50],dense:[50,50,0]};
+        const [rY,rS,rG]=tbl[R];
+        const small=i.rev<=104000000;
+        const rate=i.young?rY:(small?rS:rG);
+        const regTxt={out:'수도권 밖',pop:'수도권 인구감소지역',cap:'수도권(과밀억제권역·인구감소지역 제외)',dense:'수도권과밀억제권역'}[R];
+        const when=after26?'2026년 이후':'2025년 이전';
+        const tax=i.form==='corp'?'법인세':'종합소득세';
+        const why=i.young?`청년 창업(등록 당시 만 ${i.ageReg}세${i.ageReg>34?`, 병역 ${i.mil}개월 차감`:''})`:small?'연 매출 1억 400만 원 이하 생계형 창업':'일반 창업';
         const basis=i.young?'청년':small?'생계형':'일반';
-        out.push({t:'창업중소기업 세액감면',v:`${i.form==='corp'?'법인세':'소득세'} ${rate}% 감면 (${basis})`,d:`${!i.young&&small&&i.ok?'청년 요건에는 해당하지 않지만, ':''}부산(수도권 밖) ${why}은 소득이 처음 생긴 해부터 5년 동안 ${i.form==='corp'?'법인세':'종합소득세'}의 ${rate}%를 감면받습니다.${rate===50?' 사업자등록 당시 만 34세 이하(군 복무 기간만큼 최대 40세)였다면 100%입니다.':''} 부동산임대업·유흥업 등 일부 업종은 제외됩니다.`});
+        if(rate===0){
+          out.push({off:1,t:'창업중소기업 세액감면',v:'감면 없음',d:`${regTxt}에서 ${when} 창업한 일반 창업은 감면 대상이 아닙니다. 대표자가 창업 당시 청년(만 34세 이하, 병역기간 최대 6년 차감)이거나 연 매출 1억 400만 원 이하이면 ${rY}%를 받을 수 있습니다.`});
+        }else{
+          startup=true;
+          let d=`${regTxt}에서 ${when} 창업한 ${why}은 소득이 처음 생긴 해부터 5년 동안 ${tax}의 ${rate}%를 감면받습니다.`;
+          if(!i.young&&rY>rate) d+=` 창업 당시 대표자가 청년(만 34세 이하, 병역기간 최대 6년 차감)이었다면 ${rY}%입니다.`;
+          if(!i.young&&small) d+=' 생계형 감면은 해마다 매출로 판정하므로, 1억 400만 원을 넘는 해는 '+rG+'%가 적용됩니다.';
+          if(i.young&&i.form==='corp') d+=' 법인은 청년 대표자가 최대주주(지배주주)여야 청년 감면을 받습니다.';
+          if(rate<100) d+=` 상시근로자가 업종별 최소 인원(제조·건설·물류 10명, 그 외 5명) 이상이고 전년보다 늘면 증가율만큼 추가로 감면됩니다(최대 ${rate===75?25:50}%p).`;
+          d+=' 2025년 이후 창업분은 감면세액이 연 5억 원을 넘을 수 없고, 부동산임대업·유흥업 등 일부 업종은 제외됩니다.';
+          out.push({t:'창업중소기업 세액감면',v:`${i.form==='corp'?'법인세':'소득세'} ${rate}% 감면 (${basis})`,d});
+        }
       }
     }else if(i.ok&&!exclSector&&!partSector){out.push({off:1,t:'창업중소기업 세액감면',v:'기간 지남',d:'창업 감면은 소득이 처음 생긴 해부터 5년 동안만 받을 수 있습니다. 대신 아래 중소기업 특별세액감면을 확인하세요.'})}
 
@@ -493,6 +518,10 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
     }
 
     // 3. 통합고용세액공제 (조특법 29조의8, 2026 개편)
+    if(!i.hire){
+      const g1=loc?700:400, p1=loc?1000:700;
+      out.push({t:'통합고용세액공제',v:'직원을 늘리면 적용',d:`작년보다 4대보험 가입 직원이 늘어나면 1명당 ${loc?'지방':'수도권'} 중소기업 기준 첫해 ${g1}만 원(청년 등은 ${p1.toLocaleString('ko-KR')}만 원)부터 3년간 세금에서 뺍니다. 올해 늘린(늘릴) 직원이 있다면 08번 '늘린 직원' 칸에 인원을 넣어 보세요.`});
+    }
     if(i.hire){
       const g=loc?[700,1200,1300]:[400,900,1000], p=loc?[1000,1900,2000]:[700,1600,1700];
       const y1=(i.hy*p[0]+i.hg*g[0])*MAN, y3=(i.hy*(p[0]+p[1]+p[2])+i.hg*(g[0]+g[1]+g[2]))*MAN;
@@ -626,7 +655,7 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
   function g2ok(){const g=KSIC.find(x=>x[0]===K1.value);return K2.options.length===g[2].length}
   function curK(){const g=KSIC.find(x=>x[0]===K1.value);const it=g[2][+K2.value]||g[2][0];return {sec:g[0],code:it[0],name:it[1],book:it[2],prof:it[3],s6:it[4],s7:it[5],note:it[6]||''}}
 
-  function read(){const k=curK();return{form:val('form'),k,sector:k.prof?'4':String(k.book),open:val('open'),rev:num($('rev').value),emp:+val('emp'),cost:$('c-cost').checked,loss:$('c-loss').checked,loan:$('c-loan').checked,inv:$('c-inv').checked,grow:$('c-grow').checked,busan:$('c-busan').checked,hy:num($('h-y').value),hg:num($('h-g').value),invest:num($('inv').value),rnd:num($('rnd').value),yellow:$('c-yellow').checked,get hire(){return this.hy+this.hg>0},...ages()}}
+  function read(){const k=curK();return{form:val('form'),k,sector:k.prof?'4':String(k.book),open:val('open'),rev:num($('rev').value),emp:+val('emp'),cost:$('c-cost').checked,loss:$('c-loss').checked,loan:$('c-loan').checked,inv:$('c-inv').checked,grow:$('c-grow').checked,region:$('region').value,busan:$('region').value==='out',hy:num($('h-y').value),hg:num($('h-g').value),invest:num($('inv').value),rnd:num($('rnd').value),yellow:$('c-yellow').checked,get hire(){return this.hy+this.hg>0},...ages()}}
 
   function render(){
     const el=$('rev');const n=num(el.value);el.value=n?n.toLocaleString('ko-KR'):'';$('rev-kor').textContent=kor(n);
