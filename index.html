@@ -365,6 +365,44 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 .tl .ax div{position:relative;height:16px;font:11px var(--mono);color:var(--muted)}
 .tl .ax b{position:absolute;transform:translateX(-50%);font-weight:400}
 .tl .r.on span{font-weight:700}
+
+/* ===== 공식 위촉·자격 ===== */
+.cred{padding-block:clamp(48px,6vw,72px);border-bottom:1px solid var(--line);background:var(--paper)}
+.cr-head{max-width:46em;margin-bottom:28px}
+.cr-head h2{font-size:clamp(24px,3vw,34px);margin-top:8px}
+.cr-head p{color:var(--muted);margin-top:10px;font-size:15px}
+.cr-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:20px;align-items:stretch}
+.cr-grid button{font:inherit;color:inherit;border:0;padding:0;background:none;cursor:zoom-in;text-align:left}
+.cr-photo{position:relative;display:block;width:100%;border-radius:12px;overflow:hidden;background:var(--ink)}
+.cr-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.cr-cap{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 14px;background:linear-gradient(to top,rgba(11,42,74,.92),rgba(11,42,74,0));color:#F6F2EA;font-size:13px}
+.cr-cap b{display:block;font-size:18px;color:#E2C58A;margin-bottom:2px}
+.cr-docs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cr-doc{display:flex;flex-direction:column;gap:6px;background:var(--surface)!important;border:1px solid var(--line)!important;border-radius:10px;padding:8px!important;transition:border-color .2s,transform .2s}
+.cr-doc:hover{border-color:var(--gold)!important;transform:translateY(-2px)}
+.cr-doc img{display:block;width:100%;height:auto;aspect-ratio:619/876;object-fit:cover;object-position:top;border-radius:6px;background:#fff}
+.cr-doc b{font-size:13px;line-height:1.35;color:var(--ink)}
+.cr-doc small{font-size:11.5px;color:var(--muted);line-height:1.35}
+@media (max-width:900px){.cr-grid{grid-template-columns:1fr}.cr-photo img{height:auto;aspect-ratio:3/2}}
+@media (max-width:520px){.cr-docs{grid-template-columns:repeat(2,1fr)}}
+@media (prefers-reduced-motion:reduce){.cr-doc:hover{transform:none}}
+.cr-lb{border:0;padding:0;background:transparent;max-width:min(92vw,1100px);max-height:92vh;overflow:visible}
+.cr-lb::backdrop{background:rgba(5,15,28,.85)}
+.cr-lb img{display:block;max-width:min(92vw,1100px);max-height:82vh;width:auto;height:auto;margin:0 auto;border-radius:8px;background:#fff}
+.cr-lb p{color:#F6F2EA;text-align:center;font-size:14px;margin-top:10px}
+.cr-x{position:absolute;top:-14px;right:-14px;width:36px;height:36px;border-radius:50%;border:0;background:#F6F2EA;color:#0B2A4A;font-size:16px;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.4)}
+
+/* ===== 숫자로 보는 경력 ===== */
+.stats{background:var(--ink);color:var(--paper);border-radius:12px;padding:22px 22px 8px}
+.st-h{font-size:13px;font-weight:600;letter-spacing:.08em;color:#E2C58A;margin-bottom:14px}
+.stats dl{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:0}
+.stats dl div{padding:12px 4px 16px;border-top:1px solid rgba(246,242,234,.18)}
+.stats dt{font-family:var(--mono);font-size:clamp(26px,3vw,32px);font-weight:500;color:#F6F2EA;line-height:1.1;font-variant-numeric:tabular-nums}
+.stats dt small{font-family:var(--sans);font-size:14px;margin-left:2px;color:#E2C58A}
+.stats dd{margin:6px 0 0;font-size:12.5px;line-height:1.45;color:rgba(246,242,234,.78)!important}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .stats{background:#0E2B47;border:1px solid var(--line)}}
+:root[data-theme="dark"] .stats{background:#0E2B47;border:1px solid var(--line)}
+@media (max-width:520px){.stats dl{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -423,6 +461,24 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
     </div>
   </section>
 
+  <section class="cred" aria-label="공식 위촉·자격">
+    <div class="wrap">
+      <div class="cr-head"><span class="eyebrow">Credentials</span><h2>국세청이 인정한 세무사, 공식 위촉·자격</h2><p>국세청 국선대리인(위촉기간 2025~2027)으로 활동 중이며, 세무서 납세자보호위원회·정보공개심의회 외부위원과 세무사회 감리위원으로 위촉·임명되어 활동해 왔습니다. 사진을 누르면 크게 볼 수 있습니다.</p></div>
+      <div class="cr-grid">
+        <button type="button" class="cr-photo" data-src="/award-nts.jpg" data-cap="국세청장 감사패 수여 · 2025 국세청 선정 올해의 국선대리인 · 국세청 본청"><img src="/award-nts.jpg" alt="국세청장(왼쪽)이 오관열 세무사(오른쪽)에게 우수 국선대리인 감사패를 수여하는 모습" width="1400" height="933" loading="lazy"><span class="cr-cap"><b>국세청장 감사패 수여</b>2025 국세청 선정 올해의 국선대리인 · 국세청 본청</span></button>
+        <div class="cr-docs">
+        <button type="button" class="cr-doc" data-src="/c1-gukseon.jpg" data-cap="국세청 국선대리인 위촉 · 국세청장 · 2025.6.1.~2027.5.31."><img src="/c1-gukseon.jpg" alt="국세청 국선대리인 위촉 (국세청장 · 2025.6.1.~2027.5.31.)" width="619" height="876" loading="lazy"><b>국세청 국선대리인 위촉</b><small>국세청장 · 2025.6.1.~2027.5.31.</small></button>
+        <button type="button" class="cr-doc" data-src="/c2-napse.jpg" data-cap="세무서 납세자보호위원회 위원 · 지방국세청장 위촉"><img src="/c2-napse.jpg" alt="세무서 납세자보호위원회 위원 (지방국세청장 위촉)" width="619" height="876" loading="lazy"><b>세무서 납세자보호위원회 위원</b><small>지방국세청장 위촉</small></button>
+        <button type="button" class="cr-doc" data-src="/c3-goyang.jpg" data-cap="고양세무서 정보공개심의회 외부위원 · 인천지방국세청 고양세무서장 위촉"><img src="/c3-goyang.jpg" alt="고양세무서 정보공개심의회 외부위원 (인천지방국세청 고양세무서장 위촉)" width="619" height="876" loading="lazy"><b>고양세무서 정보공개심의회 외부위원</b><small>인천지방국세청 고양세무서장 위촉</small></button>
+        <button type="button" class="cr-doc" data-src="/c4-incheon.jpg" data-cap="세무조정·성실신고 감리위원회 위원 · 인천지방세무사회 임명"><img src="/c4-incheon.jpg" alt="세무조정·성실신고 감리위원회 위원 (인천지방세무사회 임명)" width="619" height="876" loading="lazy"><b>세무조정·성실신고 감리위원회 위원</b><small>인천지방세무사회 임명</small></button>
+        <button type="button" class="cr-doc" data-src="/c5-license.jpg" data-cap="세무사 자격증 · 기획재정부장관 · 2016.11.2."><img src="/c5-license.jpg" alt="세무사 자격증 (기획재정부장관 · 2016.11.2.)" width="619" height="876" loading="lazy"><b>세무사 자격증</b><small>기획재정부장관 · 2016.11.2.</small></button>
+        <button type="button" class="cr-doc" data-src="/c6-edu.jpg" data-cap="세무사 실무교육 수료 · 한국세무사회 · 2018.6.8."><img src="/c6-edu.jpg" alt="세무사 실무교육 수료 (한국세무사회 · 2018.6.8.)" width="619" height="876" loading="lazy"><b>세무사 실무교육 수료</b><small>한국세무사회 · 2018.6.8.</small></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <dialog class="cr-lb" id="cr-lb"><form method="dialog"><button class="cr-x" aria-label="닫기">✕</button></form><img id="cr-lb-img" alt=""><p id="cr-lb-cap"></p></dialog>
+
   <section class="kk" aria-label="카카오톡 무료 채팅 상담">
     <div class="wrap">
       <div class="kk-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3.2C6.7 3.2 2.5 6.5 2.5 10.6c0 2.6 1.7 4.9 4.3 6.2l-.9 3.5c-.1.3.3.6.6.4l4.2-2.8c.4 0 .9.1 1.3.1 5.3 0 9.5-3.3 9.5-7.4S17.3 3.2 12 3.2z"/></svg></div>
@@ -463,17 +519,16 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
           </ol>
         </div>
         <div class="acts">
-          <figure class="aw-photo">
-            <div class="aw-img">
-              <img src="/award.jpg" alt="임광현 국세청장(가운데)이 우수 국선대리인 오관열 세무사(오른쪽에서 두 번째)에게 감사패를 수여한 뒤 함께한 모습" width="681" height="380" loading="lazy">
-              <span class="pin pin-c">국세청장</span>
-              <span class="pin pin-me">오관열 세무사</span>
-            </div>
-            <figcaption><b>임광현 국세청장</b>이 직접 수여한 우수 국선대리인 감사패 · 국세청 본청</figcaption>
-          </figure>
-          <div class="award">
-            <span class="aw-year">2025</span>
-            <div><b>국세청 선정 올해의 국선대리인</b><p>국세청장 직접 수여 · 감사패</p></div>
+          <div class="stats" aria-label="숫자로 보는 오관열 세무사">
+            <div class="st-h">숫자로 보는 오관열 세무사</div>
+            <dl>
+              <div><dt>2016</dt><dd>제53회 세무사시험<br>동차합격</dd></div>
+              <div><dt>10<small>년차</small></dt><dd>서울 세무법인 3곳·<br>공기업 재무팀 실무</dd></div>
+              <div><dt>150<small>건+</small></dt><dd>매년 종합소득세<br>신고 직접 처리</dd></div>
+              <div><dt>50<small>곳+</small></dt><dd>개인·법인<br>기장 거래처</dd></div>
+              <div><dt>500<small>억+</small></dt><dd>매출 법인<br>적격합병 수행</dd></div>
+              <div><dt>4<small>곳</small></dt><dd>국세청·세무서·세무사회<br>위촉·임명 이력</dd></div>
+            </dl>
           </div>
           <div class="act-group">
             <h3><span class="ach">대표 업적</span>세무조사·불복</h3>
@@ -830,6 +885,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
   bm.onclick=function(){setV('map')};bt.onclick=function(){setV('tl')};
   show('21090');
 })();
+</script>
+<script>
+(function(){var d=document.getElementById('cr-lb');if(!d)return;var im=document.getElementById('cr-lb-img'),cp=document.getElementById('cr-lb-cap');
+document.querySelectorAll('.cred [data-src]').forEach(function(b){b.addEventListener('click',function(){im.src=b.getAttribute('data-src');im.alt=b.getAttribute('data-cap');cp.textContent=b.getAttribute('data-cap');if(d.showModal)d.showModal();else d.setAttribute('open','')})});
+d.addEventListener('click',function(e){if(e.target===d)d.close()});})();
 </script>
 </body>
 </html>
