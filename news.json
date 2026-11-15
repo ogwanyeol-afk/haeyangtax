@@ -1,101 +1,131 @@
 {
- "updated": "2026-11-15 10:51",
+ "updated": "2026-11-16 00:38",
  "items": [
   {
-   "title": "'세무사 시험 수석' 세무냥이 한 씨, AI 부정행위 자수",
-   "source": "국제뉴스",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE82MGM3WG81MnFMcmxNLVp4SUU2ZGNHbXFxd1VONHZzVTA1bXpFNmNQZVkwaFkxVEpPV3JYN2dETWtBQ3F5NVJuUVRqYkpSbVFXV2trTVloQzl4eU9manlBX1haQXpTMGw1UFNBNDBB?oc=5",
-   "date": "2026-11-15 10:27"
+   "title": "부모 명의 빈집 공짜 거주…집값 '13억' 넘으면 증여세 낸다",
+   "source": "뉴시스",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5teUd6RnRMRnVHZ0JnejdBbnJKRmFMUVpTdmVaYXE3VzZaM0s4UzZXTWdxV0dzZFRBQkRmYUN6Zm9ENXp6Q3BQT21nX0E4MzZKLWZ3LURCQm0tVTJqTmpXatIBeEFVX3lxTE1Bc3M2Uks3em5obWFRREhyNll5UFRNRzROb1RIamJ3UUtuWjljRlRkQlU5LUM1NjloQUQyekQ0Q01jM2tQcHJkcUxySHhUaFh0b1puMkdhdFZuQTM5UWJOS3VZbTlCS3A3dEN6M29zaEZWMjlkS0hadw?oc=5",
+   "date": "2026-11-16 00:00"
+  },
+  {
+   "title": "세무사회 “AI 부정 합격자, 세무사로 활동 없도록 하겠다”",
+   "source": "천지일보",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE05MTUzeDF1bUdZZ1FvZ2ZUSmNkWlJEVnhrUWhqc3lMNm5sODU0c2FUUHQzWFh1NnJqazZPLTlmLVdrYWxBVTl6RVpfZ1hQeWN5VnRLbDM4OVM4WkEzOGQzYTBnODMzWGdMeEE?oc=5",
+   "date": "2026-11-15 23:20"
+  },
+  {
+   "title": "세무사회 “수습세무사 평가로 부정합격 걸러내겠다”",
+   "source": "중앙일보",
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5WQks0QllIeE9GVTdFLXFHYnZDLVQyRmVBUm9NOTJPWmJob0xoNlVoM0NPQnFQQi12QWFNbHBUUnFQaFE2YUVLcGF5bmdfdjM5bG9HREJB?oc=5",
+   "date": "2026-11-15 22:49"
+  },
+  {
+   "title": "한국세무사회 \"AI 차단한 실무교육 자체 평가 도입…부정행위자 세무사 활동 원천 봉쇄\"",
+   "source": "KBC광주방송",
+   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFB3b2s2VHdEck9VNGVIeERHVmI3WHVKM2NIdUd6QjFFcW1jbmtFd3JjM1lDQjZDYzAwZEFXOFFfZmtQQllTX0V5Q3BoOXlwd1VNVWFOWThvbVo1RjVLSzlFRWppck5CdDdKdW93OUk0LXBjUjVHMGQ3cVIyMA?oc=5",
+   "date": "2026-11-15 22:42"
+  },
+  {
+   "title": "세무사회 “AI 부정행위 합격자, 세무사 활동 못 하게 할 것”",
+   "source": "경기일보",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE85U01qU0YyZHJ4amxEcVMtOExjRGRCUEEyQ1dtclhrSUFLbGc1U0w2b1dWcGRuNkFBUnBtTEQ5dHRfTjJPcHYzOWhlMmhsR3Jma2NiYmRRdmJZZW8?oc=5",
+   "date": "2026-11-15 22:33"
+  },
+  {
+   "title": "세무사회 “AI 도움 받을수 없는 수습세무사 평가로 부정합격 걸러내겠다”",
+   "source": "헤럴드경제",
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4tTGs5VGxDaHd2dEI4QmdKd2ZmdmZySzVYRHdiWnpvenBhZXp2SEw2cGVFcFNUc05LY3A1YjhDZXRUOHlEdGpMSmt5Qzc5QU9KYlFDSExn?oc=5",
+   "date": "2026-11-15 22:31"
+  },
+  {
+   "title": "세무사회, ‘AI 부정 합격’ 걸러낸다…“수습세무사 전원 평가시험”",
+   "source": "강원도민일보",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9NZFVrSDRZY2x4QmVmQjlJQVpmbURqYWNIc0xKQnJNM2E4VjVJUERPSkgzcUo4UksycE8xMmlKckRLd3E5emRVa3pNZWRFX2cwOEc5QzI4VkVwN0VRVmJLTkdHZlUzR2M?oc=5",
+   "date": "2026-11-15 22:29"
+  },
+  {
+   "title": "세무사회 “AI 부정행위 철저 수사…국가자격시험 전수조사해야”",
+   "source": "이데일리TV",
+   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9FVGhPQlBmeDhoNzZCVnZ4a1NLMzFBWTJURnRiLUI0d2pvOE9KMVNobFV3ZnhpY0VpWGJnUXRpQWZGV09QRDhNNjZ1d2d6QmFoLWZMUXNscnJkX3NjZWNxaktXbzV2TXRTX1FUcGEtVHFVUFFmRXgxVnRIbw?oc=5",
+   "date": "2026-11-15 22:19"
+  },
+  {
+   "title": "[TheTax]남편 사망 전→아들→이혼한 母계좌 이체된 돈…증여세 내라? - 머니투데이",
+   "source": "머니투데이",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1OLWFjaDlORW5sMWw3blJuYnUxMTVEamxXcVNKdDJoNjVzTHFhYUNEbldvNHdZcXdEVHJ0SmIzamsyMk9fZmR2dkpaeEY2X3BjV0M5dmhtRW9BVG5SLXpHUkV6N2xYb2dTcEJZ0gFwQVVfeXFMUEZPRC1wekFlNkpKZ2lBdERGRHdZWVdkSlVQMDJ1RndLV0tYVENCeXVnZzhSRnNLWW84U09qRkdrdnNnYWFIdG42NDdQNkNlSmkwMHVwMjZfT2daS0hSM2JqR3oyYkVRTmZXODFocjZCSg?oc=5",
+   "date": "2026-11-15 22:17"
+  },
+  {
+   "title": "세무사회 \"공단 위탁관리 해지하고, 세무사시험 정부가 직접 주관하라\" 성명",
+   "source": "한국세정신문",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9kU3FjMGRjNDRSLWlJVVBDUF9TRmFOS181Z2wwM1NWbGdjcXd5Q1BFWWtacEtVRWNQRWx2ZUdzdk81VXBidHNfMC1wRWQxZFJjQTJxZGFTQXc1QW5TamdwTEl1MA?oc=5",
+   "date": "2026-11-15 21:49"
+  },
+  {
+   "title": "\"왜 걸렸냐\" 쏟아지는 부정행위 자백글…'세무냥이' 처벌은? [유지희의 ITMI]",
+   "source": "한국경제",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9OQTF1Q1ppcllad0JPRzR0WUV0YzVuMVZBNERxZkpFSlE3bHBnR244TmNKZHBidk9MNlFnb2dMUVlwaklXRXNRTW1IdGtJUUZKbWI3LU5oQXJFQQ?oc=5",
+   "date": "2026-11-15 21:01"
+  },
+  {
+   "title": "하귀농협, 농업인을 위한 생활세무 상식 교육 실시",
+   "source": "지금제주",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE91YkQ0X3F3YjlPSTNHc3V0LXNzTzltcFZwTHpja2J6di05RnV5YnJLZUg0ZjBDVmRlSFN4UXNpSDdQclFVdWh3ZG1YT0F1VWh4MER4VzJaVjdZcHBZcVY1aWlkaFBKcUFhaXlpZXFB?oc=5",
+   "date": "2026-11-15 19:55"
+  },
+  {
+   "title": "한국 세무회계사 시험 수석 합격자가 인공지능을 이용해 부정행위를 저질렀다고 시인했다.",
+   "source": "Vietnam.vn",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPa2FSMkhWeTYwSW8tYjRWWDA5YTRmRy1aLVhuQTFYdHFfMmEydHVFUHJTS3RJOGpEWnhLcGhNdXZXR0ZxQlBjaWRqVVZ3SERHbGNiRnVWNm9iV3Y5d1Z6azFEX2FoUkFOMEh3OG5ETTg1bUV0RExtODFPRFlqMDh0VjhFUXBvdnluLUxheERnSWlicVFq?oc=5",
+   "date": "2026-11-15 19:50"
+  },
+  {
+   "title": "한국 세무 회계 시험 수석 졸업생, AI 사기 인정",
+   "source": "Laodong.vn",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNbzgwQzdxRThtemtkNUVEZXo1cC0zSGFnZU13RW5kWkM3SW9kaDlkMElwNVlveUdfNTNlclZXZkgyRGVaVy12SGVWWWF0ZHNFa1lWOVh1UnllbmZVSHpYdXEwT0VHZG0ycG83d2VyeUNhYjliWFBOWU9WZnNVMnNKSy1IRHFkUmtGaEE5OWpHUWg0UGhmQXVlZmhaLTJEYjVGSkR1RFAtREFaUDQ?oc=5",
+   "date": "2026-11-15 19:50"
+  },
+  {
+   "title": "'회계사' 28기 정숙, 세무사 수석 부정행위에 작심발언 \"세법 100점? 무조건 AI\" [전문]",
+   "source": "엑스포츠뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5LTmVyYnFRc1NfNURQTFNYcktVMEZZYlNLMWhYNERLTlBRUUFyQjB4eHY3RVpYVVJQQ2hZVTNkZGtoWXV2MGdDczFOSmp3ZEgyb2ZfNQ?oc=5",
+   "date": "2026-11-15 19:46"
+  },
+  {
+   "title": "'인천공항 납세지원센터' 내년 1월 8일 운영 종료한다",
+   "source": "세정일보",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1OZ2E1VFJtdldSa1hhbUNMQlowTzRWOW1QTlpFTFZrN2Q1cHh3X1BKZnpNenNTOXF3aDY0SmE5R1I3QldZT201VUZtNFdXUGdkWUZjQzFHZTFpa3lmN0xjeWJXYUVRMzk0QzhoMw?oc=5",
+   "date": "2026-11-15 18:45"
+  },
+  {
+   "title": "가사도우미 월급 대납했다 면세 지위 잃을 판…‘트럼프 충성파’ FIFA 회장, 美 국세청 진정에 긴장한 사연은[나우, 어스]",
+   "source": "헤럴드경제",
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5qWHo5VzlwSkxUbHRVRUF2ZzhlRzZIVHFmMUFZREhZR01MRThDS0gtVGwwQTVvT2g5cWxOTGd0ck9RUmNfa0loVXZYWWcyQXdEZXd5bXRn?oc=5",
+   "date": "2026-11-15 18:00"
+  },
+  {
+   "title": "\"참담함과 깊은 유감\"…세무사회, 합격 무효 요구·수습교육 강화",
+   "source": "조세일보",
+   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBkQVhSN2Z0eU9KejYxc2tQMXdVdFhzamgzVVRuODhhMGc3dUQtRk11Zm4wZmcwTG1HLVZqNDJ3NzBENFQ1ZkZVUFBCeTFLRUdWdVFTZmpwenlZaDZqekg0?oc=5",
+   "date": "2026-11-15 16:10"
+  },
+  {
+   "title": "법원 판결까지 받았는데…4637명이 軍 배상금 못 받은 속사정",
+   "source": "조세일보",
+   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9jQUxnMDlESWliQ0E3VTg3RG9ySklmWDlqSG50N1FhZ2lRT0hhTUc0cGFXLWg2RFk2VXlxZEtmTkczLVJvdndRRUFZS215RGQtWlNuZmZNUkprbEhZNUF3?oc=5",
+   "date": "2026-11-15 14:39"
   },
   {
    "title": "부산지방세무사회·부산세무사고시회, 국회 앞 릴레이 1인 시위",
    "source": "한국세정신문",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE11aFR1MFlNbmFnbk0tckRsY1pxUkVwM3QzZmxfZmQxYkxKSExZZ20wWVBUOGlnbFFKSG9ST0dtdUJIOEVwQUsxNTVSSnBTd29KYktxczBCUms1UEZvSXEtQnpKRQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBlY1pDdEVwTWlETFZkS2FzTHJ5UUVLclJmeVJxTENlSlljUVZNY2plaVZIU0Y3NUQtcDFjbmQ5dk9iakczS0pJajFuQTBhLWhKUXVZcVRmSy1HcnRYa211b0FwTlI?oc=5",
    "date": "2026-11-15 10:17"
   },
   {
-   "title": "세무사 수석, 부정행위 자백…“초소형카메라로 문제 AI로 전송”",
-   "source": "중앙일보",
-   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9wQW9xSFdUeUxTVDZLQjhhQXphZUpwNzhBUWxpb3ljblFlQ0Vqc3pSSnZWbFRMb1Buc3g5ZXk3eTR2V3RvRzVYZ3lrUmdCTmZLZlYzUFZn?oc=5",
-   "date": "2026-11-15 10:06"
-  },
-  {
-   "title": "'실거주 우대' 흔들린 종부세, '30% 할증' 재검토된 상속세 … 정치 논리에 휘둘리는 조세 원칙",
-   "source": "뉴데일리",
-   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBERHoyNng1S2t1WXFsdlR0akw0bHJ0RWVrR2FlWW1MYkwtTFc1MjJ6NmRzUUZWWjFmU1NQWmFkS0lfNFdETnJfTkZVS1VJdGQ1ekFjTGFJNFhNLVFiMk1yczdNWG9OSWpiVlF5OEs3Wkt2cjBnekd5RmVrd9IBgAFBVV95cUxOallqcVM5OUVaR2U1X1FIbzBCU1VLWlAwdTFyOVRDVGRsYkRpaGdNSnU4OXEta2YyOFJTbEpmWUppWTJUcmVIOGx6TVhBRkNydHd6aXBCSGhXN3kxZzJGOHJKRUtRMmhoMmg2bFZMR21oUmZ5bm91eEdua2JEcTRkUg?oc=5",
-   "date": "2026-11-15 09:43"
-  },
-  {
-   "title": "국민연금공단, 프리랜서 소득중단 증빙 간소화…“국세청 소득자료 실시간 연계”",
-   "source": "더퍼블릭",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5XZjZoODNDdzhzaDBiZDMzZTVRaVlxTEk3elQ5S2IwOHM0NTJCM0ZIWTBKdmpLWGg0RVZ6R3MtSkZWWk4tcjBpMHZEeFQzLVdSTEIwUFc1bDVnWldmZm12OWJuZGJDRXFMeEhz0gFvQVVfeXFMUFhiemRyWjcxQjQyM2dVQzBuVFpnLXRLWU9KdlZpZTBHekVQT2Iyclp5eEVMbFplNnpVcTBDdzNPSDFnZmVRSmJpS0p5ZTZ6bVh3bV9VZW9lZEJDY1F0X3hOUjJBRF9UZ1ZaRWp5NGhv?oc=5",
-   "date": "2026-11-15 09:03"
-  },
-  {
-   "title": "까오방 지역 세무당국은 체납 세금이 있는 기업 36곳을 공개했으며, 그중 둥박에너지가 가장 많은 세금을 체납한 것으로 나타났다.",
-   "source": "Vietnam.vn",
-   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNT1Y2ckZjTmlKRmhCX1hHX3E4R0VwRlBYQmphRnViS29Ocm9iNzU5MUNuMUlJUUdINnh0bHpFWjN4R0RlbTE0Q1VZTEI2bHlEMWZUaEIyQkNhUGJQQUl1ZzAyMTZWUU4xanpPSVo4U3lSeFBrekZ2Z2R6akJDNmhiQldsc24xbHpST1lNZHhISXROVGRxWGczaEl4VXV6d2MxRXpuMnIyTFFvYTVTTkd5SEpHTXhELVVwTDhNTGVIV0w1T0diSWhj?oc=5",
-   "date": "2026-11-15 08:45"
-  },
-  {
-   "title": "자사주 팔아 남겨도 법인세 안 낸다… 손실 비용처리도 폐지",
-   "source": "Chosunbiz",
-   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQaUx0ZUQyMUs4UUNLblNEWnJlZHc5UXZUR2hFc3NkUjZ1dDRzR05NSTgxLU9xMVFXb2UwS2xGYUZ3NHlxX3dxOWtNMlB4Ym85bC11Xy1obGc0WEZRRXR4My1kNC1NZHdSNUVfeFIxWW43anh4WS1OeXJ4NkdFTWllLTdWNkXSAZgBQVVfeXFMT0gwQTh3dHZkc3l3bkdJNXVMZnZGLVRtRFF4dmJrUElLeERUTm83dms2NW1sOFZsN1Zrb215YlhkOGNBazZpOGRSNWVQcUhnVUJFanlNaWpwUUY4RktmVnhISUtwaWdCWUY3OW5LTy1JLUVwS244R25tWDNnUzhIc0xUSlpDd2l5ZENGQmNDcnEwYkFoSlhHdTc?oc=5",
-   "date": "2026-11-15 06:04"
-  },
-  {
-   "title": "靑, 전기차 생산세액공제 조건부 포함 가닥…국회 논의 주목",
-   "source": "뉴스1",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8ycUJNSU1EdE5sMFIxTlVMMWdfU3NLN09kLTNYNlFrTGVMSThYenlGQ1hIMXlXUWtlNGtrekdTUHNvZEEyVEhDamdNcTJnczRVZ01BT1ZtNnludm8?oc=5",
-   "date": "2026-11-15 06:00"
-  },
-  {
-   "title": "\"마트 세일에 국가 쿠폰 겹쳤다\"…하락장 속 '연금저축·IRP' 절세 전략",
-   "source": "뉴시스",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBoaFBlWl9YWEViT0tidWNBSTliVXF4Q2o5XzFLcWVzQ090S21HRkJxNE9ETkltaUZRQXZybTdrM0stQjZZTXpGbXR5b1F5OUxqN0lwX2kxMHBKYjJmdEVvVNIBeEFVX3lxTE1XMWJDM0xCM2FuOWRkUGlnaklsVW9Zd3ZIeHUwRVVWSFZKVTE0VUdpZm12ZWNGbnRBRjBQZzR2M3ZMcTV1cXhucWZ0RDRucUpZQjZBaDdnWF9BdWFZbG9UNjEzZ0tVeVlpYVctQjlBX1lZdEMzZEpVdg?oc=5",
-   "date": "2026-11-15 00:00"
-  },
-  {
-   "title": "세무 당국은 데이터 분석 기술을 활용하여 전자상거래 사기와의 전쟁을 강화하고 있다.",
-   "source": "Vietnam.vn",
-   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNbl9QTHZiQlFUMjYzZXR6UHJhN0x3QjY2a2g1NnJQM1c4c2x6NFV3ZlFSNFBiX0t1d0kwQTV5bEh1WFQ4elNONTZscmVNV2NNR1V1WmhSZG05djlzMTlTTzVDT2JNaHBQUUFYMkE2NlJpU0o2eWp4LXJWRUpWa0diUV9WMTh0d01Za2hORmtwMHJ1amdlNnczTEpCUW1JVC1uaTNEM09KaExNVjlCTkd5UURB?oc=5",
-   "date": "2026-11-14 23:53"
-  },
-  {
-   "title": "이재용, 모친 홍라희로부터 삼성전자 주식 2조6천억원 증여…증여세 1조6천억원 육박",
-   "source": "www.ppss.kr",
-   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE02NTRjVVFDMW0xb3NKd05HNTR6UTBpZmJvS1pOM3puUTV3QmlGRTktc2FUR3diWkZOX1U5S2FyME5oTFZjNHJGWEVacnpmOWZkUE5wdmthRGx3ZXBxbVFQRkV4Mk8?oc=5",
-   "date": "2026-11-14 21:43"
-  },
-  {
-   "title": "홍라희에 '삼전 1115만주' 받은 이재용…증여세는 얼마?",
-   "source": "이데일리",
-   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOWG5wSTBnT3E1SUZLaGU3X1RnVTBYbm1ZX3JLWFFEZUJ6MjU4b3pBazRFaEZkQll1UGVXRjNOZlFmMHU0eGYzX21NYzJMV3E0M3ZKX1ZLU1QzcXB2NEc2Wl9Td0lvUzBMSTFNLWdDNWc5VEl4bFpCY1lIeE8tX0xpTQ?oc=5",
-   "date": "2026-11-14 20:28"
-  },
-  {
-   "title": "부가가치세 환급액이 2026년 예상치의 99%에 도달했습니다.",
-   "source": "Vietnam.vn",
-   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNYklGSzMwT1AtYkNncjZucEpIMWJOS3ZDbGF1NzIzcU9pVW56cnpZdmFZM1ZWYkdjVXNmU3lIelN3aFpxejQ3SzJ2Q1dxa0x3T0s1eTBtU3NJekczTUcwMTZXZnIyUFd0UkRTdWpvazZHdzBIdHA2NUtNVmlaTEh5Q2ZR?oc=5",
-   "date": "2026-11-14 19:38"
-  },
-  {
-   "title": "외제차 몰고 고가주택 살면서 체납…국세청, 1만명 관리단으로 ‘현장 확인’ 나선다",
-   "source": ":: 위즈경제 ::",
-   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE96TEx0SE9PeTdXbm5MZGRLcE9vUkstSUdzX1pvQm9QbDhRX1lKUnZhSm5keDZJNjVVdjBUNzBLMmtEUzdGem1MWFZzeGdfR0VUeHo5cg?oc=5",
-   "date": "2026-11-14 18:50"
-  },
-  {
-   "title": "DJP는 개인 송금이 디지털 부가가치세를 적용받지 않고, 세금도 두 번 징수되지 않도록 보장합니다.",
-   "source": "VOI.ID",
-   "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE56aERaSi1FQlR5VndmOW0xS1lhNlVOVnprLTZXbURUUlpqV3RuVkpuOEVNOHN5OEhMenFJamtkTTg1d9IBQkFVX3lxTE56aERaSi1FQlR5VndmOW0xS1lhNlVOVnprLTZXbURUUlpqV3RuVkpuOEVNOHN5OEhMenFJamtkTTg1dw?oc=5",
-   "date": "2026-11-14 18:34"
-  },
-  {
-   "title": "모친 홍라희에 삼전 주식 1115만8000주 받은 이재용, 증여세는 얼마나?",
-   "source": "문화일보",
-   "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE41TlVtN2tXSHJOd2E3bk02UUxrejhaYXVYN2ZGeE03Q1hDNmJlZUlfdFlBVmlaOWtlV29qUEQ0YnZRTmRfM0hVMzdYTURIOW1K?oc=5",
-   "date": "2026-11-14 16:46"
+   "title": "김주영, 조세특례제한법 개정안 발의…2031년 말까지 연장",
+   "source": "세정일보",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5mMEpHQzhjQ2ZQZU40a0JrLUI5ZW5jNktsdVJqdWNCLUlmU0hKLTM1RWNUVUdvZE5aVEtPMEtkemtGejhaakFIR3IxUFFpZUo1am01MUpmWXpRMTZINy1VaWNjY1dDeWY0OWtvVw?oc=5",
+   "date": "2026-11-14 10:53"
   },
   {
    "title": "부산·관악지역 세무사 7명, 회계사법 개정 반대 1인 시위",
@@ -106,7 +136,7 @@
   {
    "title": "[펜타곤의 택스노트] 세무조사 확인서와 진술서의 무게…세무공무원은 무엇을 보는가",
    "source": "조세금융신문",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1DU1lOMVpNelNpNlFOSzRqQ3M0SkpnR21zZURHaEF1LUFNMER0R2tYSnV3eE9sWHVzbmJDS2cxQm51b3BvZFQwOFQ2WWxHUVVxZWxTbTI4T3Ewc2xGMl9RRUlZOA?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE16S1N3dVQ2ZHhQU0doZ1FiWFNqLUxQWEZaVUZoSXBVaERESVNIRm0tTjVyZkh0UGNSQ2o5ZDctZmNSM2ZadDRhUmhlT0VaUnhJTFlhVWQ0ZlhaZFQ1S2c?oc=5",
    "date": "2026-11-13 17:35"
   },
   {
@@ -114,6 +144,12 @@
    "source": "조세일보",
    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5ONlJBT0xLY1A0VGYwVEhPTUdET2pmQWhBRFJUVWE1SU1vYlFkN21wa0tTdl9ab1hieXZGc1M0aXFrYmpZSmhiSXFSY2NiSWZSMXpaV2V3eHQ5eGt5WXZJ?oc=5",
    "date": "2026-11-13 17:28"
+  },
+  {
+   "title": "\"회계사 이해충돌 입법 철회하라!\"…계양·관악·부산 세무사들, 국회 앞 1인 시위",
+   "source": "세정일보",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBaa053RGNKUUJLWlJUeXdZajlIM0dzdkNIcC1WaVc4b0ktVkpYVVFLODhNN2VrMmxfSGdMN1dnVnMzdGdCQ0VFdUdkakNkVUJUT281b2VwWUdETmdkZW9rV2J4VXF4VEFtZllsNw?oc=5",
+   "date": "2026-11-13 17:07"
   },
   {
    "title": "“회계사 이해충돌 입법 철회하라!”… 부산·관악 세무사들, 국회 앞 1인 시위",
@@ -134,6 +170,12 @@
    "date": "2026-11-13 15:26"
   },
   {
+   "title": "9월까지 나라살림 적자 32조, 8년만 최소…세수호조에 3분의 1로",
+   "source": "세무사신문",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5mOWwwLTV3M0szNUc3akpnRWUtN05mRFFIV01ObzRSSzhPeHI2ckNCZ2dabXUwT0UtNVFFR0puc19YYngxMlJBYUlaaDZyam5ZNzRNQ3RsNk9FWVkyYTA5dkU4cWRCZEQ0MjJROU5R?oc=5",
+   "date": "2026-11-13 10:35"
+  },
+  {
    "title": "정부, 월세 세액공제 확대·부양가족 소득요건 완화 추진…‘월급방위대’ 가동",
    "source": "세정일보",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE03Y19UYTZialBvZUNQRjNUMjJ2V0FHdjdCRXEtMVhVemZEZmNXendlS3ZURl85d3JjU1o5ckJKSGVKNjFET3VFY2dxa283N3RGMG5uTUZhWTVONURXRHBqVURmelAzNHdlcUNTVQ?oc=5",
@@ -152,46 +194,16 @@
    "date": "2026-11-13 09:17"
   },
   {
+   "title": "금천구·금천지역세무사회, 고향사랑기부제 활성화 업무협약",
+   "source": "조세일보",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1pWS1QcU5qckw1R3JCTXBzT2lqd3piOTJDYno3cWJnWGdnNXptYm5QeXB5V2lnbkNMYnAyRFMxSzVTU040b2FmSEZ3QzEyOHhHbmIxMGVzMk1OVTJCbXlVMUhYMkNoUGZsV2t1N2pJYw?oc=5",
+   "date": "2026-11-13 09:11"
+  },
+  {
    "title": "\"AI·플랫폼이 경쟁력\"…직원 이어 세무사들도 플랫폼세무사회 활용교육 박차",
    "source": "한국세정신문",
    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5LTWZqcWZrakxuY29GQXVBNWVONG82TUFhY25UYVZZSXM2ZnBocGdpQ29EVVpIamdZTjVMLXcwSGl1RmRTZml3Y1FOdjRXbFhuX2liZ2xPaC1BQTlwZmVlT2VGMVY?oc=5",
    "date": "2026-11-13 08:34"
-  },
-  {
-   "title": "국세청장 후보, 강남 살며 강북 임대…해외파견‧세종발령 등으로 불가피",
-   "source": "조세금융신문",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5nb0lneTFENmZuQmNLOVAxdTBrdmxJblNwUlJibXFIbl9vUjlqeXpnUmRCMmxTMEpBWW9PV0lHYjk2WGk1cDZ4MEdVVW1YbVBpeGthZGRZdElUaXJ3VFQtSWlBYw?oc=5",
-   "date": "2026-11-12 19:13"
-  },
-  {
-   "title": "세무사회, 63회 시험 부정행위 의혹 철저한 진상조사 촉구",
-   "source": "한국세정신문",
-   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9TWDJQZ3h3N3d4TWYtUnh4d2V3RDJoekZnUVBPLXRXMVZfWGh0bEViN3NRdHdyNzV6Y0IyY0gxZ2Nzcmp0eFQ2QmF4OVU2dG1Sb01TSFJySGx0UlZQUjVLQUVDM2o?oc=5",
-   "date": "2026-11-12 16:40"
-  },
-  {
-   "title": "안덕수 국세청장 후보 '비거주 1주택' 논란…국세청 \"청문회서 설명\"",
-   "source": "조세일보",
-   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5maG5FRllndTAwamtJNV9XZHFqYWZ1RXJNaFBuOS1vSzhkaVZrdnk5aWszajg5RDcyZ2pZV19HX1N6OTZmSDRUZVcyRzlSM2VZYkRfTEkwQ096R29WekRz?oc=5",
-   "date": "2026-11-12 16:20"
-  },
-  {
-   "title": "송영덕·채지원 용인·계양세무사회장, 회계사법 개정안 철회 촉구 1인시위",
-   "source": "한국세정신문",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBYZWZxcVpyTEwxWjBCbFhBR3RqVEtSOTNiZlZ2YTU3UzFXOTFxS2diZDV6d3ZacGtDTG1XSzR4RUp2NTFqRGlLQTIwajFhYTZwMGREakFDOXlwMHI5b0VVdEhvYXRkQzQ?oc=5",
-   "date": "2026-11-12 16:16"
-  },
-  {
-   "title": "[기고]세무사시험 'AI 부정행위' 의혹, 세무사 자격의 신뢰를 지키는 계기로 삼는 전환점이 되어야",
-   "source": "한국세정신문",
-   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1nanlVVGhnaFB5R1NKR2x0d253R20zN3VYUk16Z2lfSDE3c3FzYkhQQU02aTNLSTRQcnc5cEltYUVIV0I5TUVlakg0U1RIOGszMXJYeVFtS0o5ZWl5M2VnRHBoSnY?oc=5",
-   "date": "2026-11-12 16:05"
-  },
-  {
-   "title": "\"회계사 이해충돌 입법 철회하라!\"… 채지원 계양지역세무사회장, 국회 앞 1인 시위[9일차]",
-   "source": "세무사신문",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE96a3hnZUk3cEVYZGZfR2FZeTR6TU01WUFOMEIwU1NtejJrbjU0ZGc0My1faVQtLVRUSGdLTHloSENXRDFlbGRiSUJPam5rdUhjQ1pWX3lISVEwRlNUZ1cxR0Y1X3Bfc25VMEZBenFn?oc=5",
-   "date": "2026-11-12 15:46"
   },
   {
    "title": "대법, 빗썸 코인 상장 청탁 30억 대가성 불인정…명품 시계·가방 수수는 유죄",
@@ -200,28 +212,16 @@
    "date": "2026-11-12 15:45"
   },
   {
-   "title": "세무사시험 수석 'AI 부정행위' 의혹…세무사회 \"관계기관에 진상조사 촉구\"",
-   "source": "조세금융신문",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9BcGVzYzRxdUo3WVlqWldkV1hJM19sU0hMUXN0OFE2MzR2Mms5T00tMUtwVDQ5OWtJazI4UjFhMWdWYlV5QmYybnRiakVOdUtBYXN6SWNwc3RWLXJ0SG1jb3o5QQ?oc=5",
-   "date": "2026-11-12 13:44"
-  },
-  {
-   "title": "'고려대 전성시대'…60년 만에 첫 고대 출신 국세청장 탄생 눈 앞",
-   "source": "한국세정신문",
-   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBPZ2tpWkRsVExaNHlzcDNYV2UxNWJ0NWltT2ZDbVlpeGEzRlpmdzNFU2hubHFTdXU1ZDctT3p0WVUtV3B5N1dkRW5lMnJ2U0hSa3NrMlhGaU4tclA2T0FjTzhDazY?oc=5",
-   "date": "2026-11-12 13:36"
-  },
-  {
-   "title": "금천지역세무사회, 금천구와 고향사랑기부제 활성화 업무협약",
-   "source": "한국세정신문",
-   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE0xbENEb2Z5RDg0SDRWbkMxN19pVVg0QTZNQkYwT0l5T3gwQWlEOUJVQVk2WHA3RjJLZlZVZ1k5YTlRckREWnVDQkJMYUg0Y3l1YVZjS0F5WGgzbHZGX0VNNDJrUGU?oc=5",
-   "date": "2026-11-12 11:59"
-  },
-  {
    "title": "이용철 법무후보 \"공소취소, 지금은 답변 부적절\"",
    "source": "조세일보",
    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFB6R0pHS09PX2tJNERzOFRRYW5Yc1dnd2V3MnVKVFg0UndPZVljNC14QmdvMkdUaTN2aFZzZUQyN0hKZzVBelhzTW9XT2hha0tFTGpYYTlhcGp4Z1haMEd3Ty1YelA5RzVpZWlsTkRLdVlGVkdv?oc=5",
    "date": "2026-11-12 10:28"
+  },
+  {
+   "title": "[예규·판례] 대법 \"12년간 주·야간 교대근무하다 뇌출혈 사망…피로누적땐 산재\"",
+   "source": "조세금융신문",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB4TVRpb05RZEpfWlVjUXdDSEJ3b1BIeFp6QlZmMTZ3N3M4ZXh1QjUtbkpJR09RYnRHd19zWE9CSlVUTEt3MFpweS1leFZlMVRueXZIYTF5ZEpBXzlYTWNNQ1RzUQ?oc=5",
+   "date": "2026-11-12 08:00"
   },
   {
    "title": "공소청, '화천대유 고문' 권순일 2심서 '파기환송' 요청...\"수사 개시권 있어\"",
@@ -230,16 +230,16 @@
    "date": "2026-11-11 15:32"
   },
   {
-   "title": "성남도개공, 김만배 배우자 명의 22억 토지 가압류...차명재산 추적",
-   "source": "조세일보",
-   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBwQkVLanZmSWhIYWc4UGZqWlpuYmRRTVktRG5TR2Z5QjYyYUVXd1luWlZlclRCanl6Z0FSVklOYndhdmJMdFAyVjRTWE9oV05uTzlTTTVFT2NpaW44UkJN?oc=5",
-   "date": "2026-11-11 10:42"
-  },
-  {
    "title": "조세금융신문",
    "source": "조세금융신문",
    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE90QkVBLTMzbW9SZ0Z1RzJjeV9lNzRwUzFMY0xmY3hkNHB5eVNnZDFHaTctYmlPeTNNWTM5LWdLc1dQbzFhbkpOd0RkYXVHTU9LZFViS3JaWTA3eElpVlprT1FtUHctQQ?oc=5",
    "date": "2026-11-11 08:21"
+  },
+  {
+   "title": "성실신고 세액공제 확대, “효과 미미한데…연 7천억 세수 결손 우려”",
+   "source": "세정일보",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8zYm5JUmtkMEpaRW9nSmFWNGRWVWRSZmRMcURBRHU0RlJCUkFWVnh1ZlhvSFFkVW9QN1k4R1QwTTNWZmE4dEpYZXFNa2N2VUpYN1lOTHNjTVVWWXYxQXR4N3A1QU5ZcEUzWGEwQw?oc=5",
+   "date": "2026-11-10 12:04"
   }
  ]
 }
